@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BotVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>v1</fullName>
+    <articleAnswersGPTEnabled>false</articleAnswersGPTEnabled>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Hi, I’m Agentforce! I use AI to search trusted sources, and more. Ask me “What else can you do?” to see how I can simplify your workday. How can I help?</message>
+                <messageIdentifier>1a9628fa-b0cd-4d8c-8dba-ef58fe5dbe29</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>d1fe0416-b42a-481a-b324-484c015a98a1</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>c6aed0af-9d75-4dc8-981f-bf718c6c7dc1</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Welcome</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Hi! I&apos;m your helpful bot.</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Something went wrong. Try again.</message>
+                <messageIdentifier>f225d081-3190-4c2e-b530-264fee006881</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>02a64b13-afbc-4f4a-8517-632807320208</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>e8ee6f43-26b4-4328-b5e9-c77aa5b3ecaf</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Error_Handling</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Unfortunately, a system error occurred. Let us start again.</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>One moment while I connect you to the next available service representative.</message>
+                <messageIdentifier>f615f8cf-7f6e-4d0d-ade2-3ff107a3c3f9</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>f7e9a98e-3a2e-40de-b828-451ec2edbaa8</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <conversationSystemMessage>
+                <type>Transfer</type>
+            </conversationSystemMessage>
+            <stepIdentifier>34133c38-4b1c-4728-ae7e-bdbb352ec6d3</stepIdentifier>
+            <type>SystemMessage</type>
+        </botSteps>
+        <developerName>Transfer_To_Agent</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Transfer To Agent</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <citationsEnabled>false</citationsEnabled>
+    <company>Salesforce</company>
+    <conversationDefinitionPlanners>
+        <genAiPlannerName>DIY_Employee_Agent</genAiPlannerName>
+    </conversationDefinitionPlanners>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Salesforce Application Name.</description>
+        <developerName>currentAppName</developerName>
+        <includeInPrompt>true</includeInPrompt>
+        <label>currentAppName</label>
+        <visibility>External</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>The API name of the Salesforce object (such as Account or Opportunity) associated with the record the user wants to interact with. Do not use this if the user is already talking about another object in the conversation.</description>
+        <developerName>currentObjectApiName</developerName>
+        <includeInPrompt>true</includeInPrompt>
+        <label>currentObjectApiName</label>
+        <visibility>External</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Type of Salesforce Page.</description>
+        <developerName>currentPageType</developerName>
+        <includeInPrompt>true</includeInPrompt>
+        <label>currentPageType</label>
+        <visibility>External</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>The ID of the record on the user&apos;s screen. It may not relate to the user&apos;s input. Only use this if the user input mentions &apos;this&apos;, &apos;current&apos;, &apos;the record&apos;, etc. If in doubt, don&apos;t use it.</description>
+        <developerName>currentRecordId</developerName>
+        <includeInPrompt>true</includeInPrompt>
+        <label>currentRecordId</label>
+        <visibility>External</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>This variable may also be referred to as VerifiedCustomerId</description>
+        <developerName>VerifiedCustomerId</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>VerifiedCustomerId</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <entryDialog>Welcome</entryDialog>
+    <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
+    <intentV3Enabled>false</intentV3Enabled>
+    <knowledgeActionEnabled>false</knowledgeActionEnabled>
+    <knowledgeFallbackEnabled>false</knowledgeFallbackEnabled>
+    <role>An AI customer service agent whose job is to help customers with support questions or other issues.</role>
+    <smallTalkEnabled>false</smallTalkEnabled>
+    <staticPromptsEnabled>true</staticPromptsEnabled>
+    <stopRecPrompts>false</stopRecPrompts>
+    <stopWelcomePrompts>false</stopWelcomePrompts>
+    <surfacesEnabled>false</surfacesEnabled>
+    <toneType>Casual</toneType>
+    <welcomeRecommendations>
+        <staticUtterance>I&apos;m stopping by the store anything should i pickup</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>Do i need anything for the seasonal prep?</staticUtterance>
+    </welcomeRecommendations>
+    <welcomeRecommendations>
+        <staticUtterance>What are the current sales that would interest me?</staticUtterance>
+    </welcomeRecommendations>
+</BotVersion>

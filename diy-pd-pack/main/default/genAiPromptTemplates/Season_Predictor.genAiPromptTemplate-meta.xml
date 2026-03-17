@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>7ZdSgvdRL4Xb/KyZz4Lyp2A8By563ZXj/MnJmMk89aY=_1</activeVersionIdentifier>
+    <developerName>Season_Predictor</developerName>
+    <masterLabel>Season Predictor</masterLabel>
+    <templateVersions>
+        <content>You are a season classifier.
+
+Task:
+Determine the season for the given location on the given date.
+
+What is the current season on {!$Input:City},{!$Input:City} on {!$Input:Date}
+
+Provide only the Season Name i dont need any other message along with it.
+</content>
+        <inputs>
+            <apiName>Date</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Date</masterLabel>
+            <referenceName>Input:Date</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>City</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>City</masterLabel>
+            <referenceName>Input:City</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Country</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Country</masterLabel>
+            <referenceName>Input:Country</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>7ZdSgvdRL4Xb/KyZz4Lyp2A8By563ZXj/MnJmMk89aY=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

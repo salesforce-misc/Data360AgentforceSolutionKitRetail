@@ -1,0 +1,61 @@
+<template>
+    <lightning-card icon-name="standard:store" title="Recent Purchases">
+        <template if:true={products}>
+            <div class="carousel-box">
+
+                <!-- TRACK -->
+                <div class="carousel" lwc:ref="carouselTrack">
+                    <template for:each={products} for:item="item">
+                        <div key={item.productName} class="card">
+                            
+                            <!-- IMAGE -->
+                            <img
+                                src={item.imageUrl}
+                                alt={item.productName}
+                                class="product-image" />
+
+                            <!-- NAME -->
+                            <div class="product-name">
+                                {item.productName}
+                            </div>
+
+                            <!-- DESCRIPTION -->
+                            <div class="description">
+                                {item.shortDescription}
+                            </div>
+
+                            <!-- PRICE -->
+                            <div class="price">
+                                ${item.unitPrice}
+                            </div>
+
+                        </div>
+                    </template>
+                </div>
+
+                <!-- DOTS -->
+                <div class="dots">
+                    <template for:each={dots} for:item="dot">
+                        <span
+                            key={dot.index}
+                            class={dot.className}
+                            data-index={dot.index}
+                            onclick={handleDotClick}>
+                        </span>
+                    </template>
+                </div>
+
+            </div>
+        </template>
+
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading purchases..." size="medium"></lightning-spinner>
+        </template>
+
+        <template if:true={error}>
+            <p class="slds-text-color_error slds-p-around_medium">
+                Error: {error}
+            </p>
+        </template>
+    </lightning-card>
+</template>

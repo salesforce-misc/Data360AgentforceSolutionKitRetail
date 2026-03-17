@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPackageKitObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Data360RetailDIYDataKit</masterLabel>
+    <parentDataPackageKitDefinitionName>Data360RetailDIYDataKit</parentDataPackageKitDefinitionName>
+    <referenceObjectName>Customer_Engagement_Feed_CIN_map_ssot_Individual_CIN_1770487246366</referenceObjectName>
+    <referenceObjectType>FieldSrcTrgtRelationship</referenceObjectType>
+</DataPackageKitObject>

@@ -1,0 +1,28 @@
+{
+  "packageDirectories": [
+    {
+      "path": "diy-base",
+      "default": true
+    },
+    {
+      "path": "diy-pd-pack",
+      "default": false
+    },
+    {
+      "path": "diy-datacloud",
+      "default": false
+    },
+    {
+      "path": "diy-embeddedservice",
+      "default": false
+    },
+    {
+      "path": "diy-pd-experience-optional",
+      "default": false
+    }
+  ],
+  "name": "DIYRetail",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "65.0"
+}

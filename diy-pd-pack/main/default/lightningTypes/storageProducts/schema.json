@@ -1,0 +1,5 @@
+{
+  "title" : "storageProducts",
+  "description" : "",
+  "lightning:type" : "@apexClassType/c__storageOutput"
+}

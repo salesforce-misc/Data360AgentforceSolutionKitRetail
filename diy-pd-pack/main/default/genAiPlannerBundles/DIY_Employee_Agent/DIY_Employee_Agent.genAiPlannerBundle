@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>Deliver personalized customer interactions with an autonomous AI agent. Agentforce Employee Agent intelligently supports your customers with common inquiries and escalates complex issues.</description>
+    <localActionLinks>
+        <genAiFunctionName>AnswerQuestionsWithKnowledge_16jfj000001FexR</genAiFunctionName>
+    </localActionLinks>
+    <localTopicLinks>
+        <genAiPluginName>Blade_Product_16jfj000001FexR</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>Customer_Purchase_Products_16jfj000001FexR</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>DIY_Projects_16jfj000001FexR</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>DIY_Store_Assistant_16jfj000001FexR</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>Customer_Purchase_Products_16jfj000001FexR</fullName>
+        <canEscalate>false</canEscalate>
+        <description>This topic handle enquiry about  upgrading my tools, storage cabinet is large/huge how do i take it to home and then display the return message and return product list, and show some recommendation. Do not check sale products here.</description>
+        <developerName>Customer_Purchase_Products_16jfj000001FexR</developerName>
+        <genAiPluginInstructions>
+            <description>If customer ask about storage cabinet is large/huge, how do i take it to home then run the &apos;storageCabinetDetails&apos; action and display response in bullet points. DO NOT ASK ANY FOLLOW UP QUESTION.  KEEP HEADINGS AND LINE BREAKS EXACTLY AS WRITTEN. DO NOT DISPLAY IN PARAGRAPH</description>
+            <developerName>instruction_1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction 1</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If customer ask specifically about about upgrading my tools, then run action run the &apos;UpgradingToolsSuggestion&apos; action and pass the contactId   as  Id of the Current Record and display the response in list and DisplayUrl should be in hyperlink format.
+
+KEEP HEADINGS AND LINE BREAKS EXACTLY AS WRITTEN.
+DO NOT REWRITE ANY OTHER CONTENT OR CHANGE STRUCTURE.</description>
+            <developerName>instruction_2</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction 2</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>storageCabinetDetails_179fj000001WfaX</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>UpgradingToolsSuggestion_179fj000001WfaX</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>storageCabinetDetails_179fj000001WfaX</fullName>
+            <description>This action get execute when customer ask a question about storage cabinet looks huge. Not sure how to bring it and display the response</description>
+            <developerName>storageCabinetDetails_179fj000001WfaX</developerName>
+            <invocationTarget>storageCabinetDetails</invocationTarget>
+            <invocationTargetType>generatePromptResponse</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>storageCabinetDetails</localDeveloperName>
+            <masterLabel>storageCabinetDetails</masterLabel>
+            <source>storageCabinetDetails</source>
+        </localActions>
+        <localActions>
+            <fullName>UpgradingToolsSuggestion_179fj000001WfaX</fullName>
+            <description>This agent action is used to help the customer in upgrading tools by checking the past history and providing suggestions</description>
+            <developerName>UpgradingToolsSuggestion_179fj000001WfaX</developerName>
+            <invocationTarget>UpgradingToolsSuggestion</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>UpgradingToolsSuggestion</localDeveloperName>
+            <masterLabel>UpgradingToolsSuggestion</masterLabel>
+            <source>UpgradingToolsSuggestion</source>
+        </localActions>
+        <localDeveloperName>Customer_Purchase_Products</localDeveloperName>
+        <masterLabel>Customer Purchase Products</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to assist enquiry about upgrading my tools, storage cabinet is large/huge  how do i take it to home and Then display the return message and return product list, and show some recommendation of products. You should not handle unrelated topics or provide information outside of Customer Purchase Products. You should not run this topic for current sales that would interest customer.</scope>
+    </localTopics>
+    <localTopics>
+        <fullName>DIY_Projects_16jfj000001FexR</fullName>
+        <canEscalate>false</canEscalate>
+        <description>This topic is to handle customer enquiries and action related to bathroom remodeling , how to build a deck and provide the information about it</description>
+        <developerName>DIY_Projects_16jfj000001FexR</developerName>
+        <genAiPluginInstructions>
+            <description>If customer ask about bathroom remodeling queries then run the action &apos;Bathroom Remodeling Prompt&apos; and display exact prompt response. Also customer  can select multiple options — choosing one category does NOT disable or restrict the selection of others.</description>
+            <developerName>instructions_0_1770127775720</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1770127775720</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If customer ask about building a deck queries then run the action &apos;Building Deck Prompt&apos; and display exact prompt response</description>
+            <developerName>instruction_1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction 1</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Building_Deck_Prompt_179fj000001UWzZ</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Bathroom_Remodeling_Prompt_179fj000001UWzZ</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Bathroom_Remodeling_Prompt_179fj000001UWzZ</fullName>
+            <description>This action used to get execute when customer asks query regarding bathroom modeling and display exact prompt response(It will identify and display the category and ask user to select one of them)</description>
+            <developerName>Bathroom_Remodeling_Prompt_179fj000001UWzZ</developerName>
+            <invocationTarget>Bathroom_Remodeling_Prompt</invocationTarget>
+            <invocationTargetType>generatePromptResponse</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Bathroom_Remodeling_Prompt</localDeveloperName>
+            <masterLabel>Bathroom Remodeling Prompt</masterLabel>
+            <source>Bathroom_Remodeling_Prompt</source>
+        </localActions>
+        <localActions>
+            <fullName>Building_Deck_Prompt_179fj000001UWzZ</fullName>
+            <description>This action used to get execute when customer asking a question related to building a deck, and display exact prompt response.</description>
+            <developerName>Building_Deck_Prompt_179fj000001UWzZ</developerName>
+            <invocationTarget>Building_Deck_Prompt</invocationTarget>
+            <invocationTargetType>generatePromptResponse</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Building_Deck_Prompt</localDeveloperName>
+            <masterLabel>Building Deck Prompt</masterLabel>
+            <source>Building_Deck_Prompt</source>
+        </localActions>
+        <localDeveloperName>DIY_Projects</localDeveloperName>
+        <masterLabel>DIY Projects</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is only to assist customers with queries related to bathroom remodeling, building a deck and perform the associated action and display the response. You should not handle unrelated topics or provide information outside of DIY Projects.</scope>
+    </localTopics>
+    <localTopics>
+        <fullName>DIY_Store_Assistant_16jfj000001FexR</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Classifies customer conversations related to current sales, seasonal products,  storage‑related queries along with sugguestion and  to check for Furnace Maintenance to ensure the agent provides relevant offers, product details, and recommendations.</description>
+        <developerName>DIY_Store_Assistant_16jfj000001FexR</developerName>
+        <genAiPluginInstructions>
+            <description>When customer ask about I’m stopping by the store later — anything I should pick up? then run action &apos;StorageProductEnquiry&apos; and by passing the contactId   as  Id of the Current Record and Display the response. 
+DO NOT SKIP OR HIDE ANY INFORMATION.</description>
+            <developerName>instructions_0_1770095107529</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1770095107529</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When the customer ask Do I need anything for seasonal prep? then run &apos;Seasonal Product Recommender&apos;  by passing the contactId   as  Id of the Current Record and display the response message always and list the product as well 
+DO NOT SHOW  JSON FORMAT IN OUTPUT MESSAGE</description>
+            <developerName>instructions_0_1770281419778</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1770281419778</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>when customer ask exactly like &apos;What are the current sales that would interest me&apos; then strictly run the action &apos;PromotionEligibility&apos; by passing the contactId   as  Id of the Current Record and display the Message as is</description>
+            <developerName>instruction_1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction 1</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If customer says &apos;My furnace has been acting up&apos; then run the action &apos;Get HVAC Warranty Message&apos; by passing the contactId   as  Id of the Current Record and return the output message as is 
+If customer says &apos;Yes&apos; for &apos;Would you also like a quote on a warranty extension?&apos;  then strictly display the below message dont show the display message which you retrieve from Action again
+
+Available Plans:
+(SEPERATE LINE)
+Provide details in seperate line 1‑Year Warranty Extension – $149
+Provide details in seperate line 3‑Year Warranty Extension – $349</description>
+            <developerName>instruction_2</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction 2</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When customer asks exactly like &apos;Anything interesting on sale right now&apos;  then run &apos;Sales Recommendation&apos; by passing the contactId   as  Id of the Current Record and return the output message as is</description>
+            <developerName>instruction_3</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction 3</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Seasonal_Product_Recommender_179fj000001QgRF</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>PromotionEligibility_179fj000001QgRF</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>StorageProductEnquiry_179fj000001QgRF</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Get_HVAC_Warranty_Message_179fj000001QgRF</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Sales_Recommendation_179fj000001QgRF</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Get_HVAC_Warranty_Message_179fj000001QgRF</fullName>
+            <description>Returns only the HVAC warranty/tune-up message based on the most recent eligible HVAC order.</description>
+            <developerName>Get_HVAC_Warranty_Message_179fj000001QgRF</developerName>
+            <invocationTarget>HVACWarrantyService</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Get_HVAC_Warranty_Message</localDeveloperName>
+            <masterLabel>Get HVAC Warranty Message</masterLabel>
+            <source>Get_HVAC_Warranty_Message</source>
+        </localActions>
+        <localActions>
+            <fullName>StorageProductEnquiry_179fj000001QgRF</fullName>
+            <description>This agent action is used to check the power tools the user has previously bought and suggest storage recommendations</description>
+            <developerName>StorageProductEnquiry_179fj000001QgRF</developerName>
+            <invocationTarget>StorageProductEnquiry</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>StorageProductEnquiry</localDeveloperName>
+            <masterLabel>StorageProductEnquiry</masterLabel>
+            <source>StorageProductEnquiry</source>
+        </localActions>
+        <localActions>
+            <fullName>Seasonal_Product_Recommender_179fj000001QgRF</fullName>
+            <description>Seasonal Product</description>
+            <developerName>Seasonal_Product_Recommender_179fj000001QgRF</developerName>
+            <invocationTarget>Seasonal_Product_Recommender</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Seasonal_Product_Recommender</localDeveloperName>
+            <masterLabel>Seasonal Product Recommender</masterLabel>
+            <source>Seasonal_Product_Recommender</source>
+        </localActions>
+        <localActions>
+            <fullName>Sales_Recommendation_179fj000001QgRF</fullName>
+            <description>This agent action is used to retrieve the Products based on the previous purchased category.</description>
+            <developerName>Sales_Recommendation_179fj000001QgRF</developerName>
+            <invocationTarget>Sales_Recommendation</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Sales_Recommendation</localDeveloperName>
+            <masterLabel>Sales Recommendation</masterLabel>
+            <source>Sales_Recommendation</source>
+        </localActions>
+        <localActions>
+            <fullName>PromotionEligibility_179fj000001QgRF</fullName>
+            <description>This action is used to check the current sales that would interest customer</description>
+            <developerName>PromotionEligibility_179fj000001QgRF</developerName>
+            <invocationTarget>PromotionEligibility</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>PromotionEligibility</localDeveloperName>
+            <masterLabel>PromotionEligibility</masterLabel>
+            <source>PromotionEligibility</source>
+        </localActions>
+        <localDeveloperName>DIY_Store_Assistant</localDeveloperName>
+        <masterLabel>DIY Store Assistant</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to handle queries where customers ask about current sales that would interest them, seek seasonal products or storage products, or show interest in items where timely deals or product relevance or Furnace maintenance and can support their purchase decision.</scope>
+    </localTopics>
+    <localTopics>
+        <fullName>Blade_Product_16jfj000001FexR</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Your job is to assist enquiry about I bought composite decking — is my blade okay?  and display the product feature and product description(from response)</description>
+        <developerName>Blade_Product_16jfj000001FexR</developerName>
+        <genAiPluginInstructions>
+            <description>When customer ask about &quot;I bought composite decking — is my blade okay?&quot; then run the &apos;BladeProductRecomendation&apos; action by passing contactId as Id of current Record and requestType as &apos;BLADE_PRODUCTS&apos; . Display exact prompt resonse. DO NOT SKIP OR HIDE ANY INFORMATION.DO NOT ADD ANY EXTRA WORDS. DO NOT SKIP PURCHASED PRODUCT NAME.</description>
+            <developerName>instruction_1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction 1</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>BladeProductRecomendation_179fj000001WczF</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>BladeProductRecomendation_179fj000001WczF</fullName>
+            <description>This action gets execute to provide the information(feature and description) for customer purchased blade</description>
+            <developerName>BladeProductRecomendation_179fj000001WczF</developerName>
+            <invocationTarget>BladeProductRecomendation</invocationTarget>
+            <invocationTargetType>generatePromptResponse</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>BladeProductRecomendation</localDeveloperName>
+            <masterLabel>BladeProductRecomendation</masterLabel>
+            <source>BladeProductRecomendation</source>
+        </localActions>
+        <localDeveloperName>Blade_Product</localDeveloperName>
+        <masterLabel>Blade Product</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to assist enquiry about I bought composite decking — is my blade okay?  and display the product feature and product description(from response). You should not handle unrelated topics or provide information outside of Blade Product.</scope>
+    </localTopics>
+    <masterLabel>DIY Employee Agent</masterLabel>
+    <plannerActions>
+        <fullName>AnswerQuestionsWithKnowledge_16jfj000001FexR</fullName>
+        <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+        <developerName>AnswerQuestionsWithKnowledge_16jfj000001FexR</developerName>
+        <invocationTarget>streamKnowledgeSearch</invocationTarget>
+        <invocationTargetType>standardInvocableAction</invocationTargetType>
+        <isConfirmationRequired>false</isConfirmationRequired>
+        <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+        <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+        <masterLabel>Answer Questions with Knowledge</masterLabel>
+        <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+        <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+    </plannerActions>
+    <plannerSurfaces>
+        <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+        <callRecordingAllowed>false</callRecordingAllowed>
+        <surface>SurfaceAction__Messaging</surface>
+        <surfaceType>Messaging</surfaceType>
+    </plannerSurfaces>
+    <plannerType>AiCopilot__ReAct</plannerType>
+</GenAiPlannerBundle>

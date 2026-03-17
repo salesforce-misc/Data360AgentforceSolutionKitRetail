@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This agent action finds top purchased category and recommends other products from similar category and display the recommendation.</description>
+    <developerName>Current_Sales_Recommendations</developerName>
+    <invocationTarget>CurrentSalesRecommendation</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Current_Sales_Recommendations</localDeveloperName>
+    <masterLabel>Current Sales Recommendations</masterLabel>
+</GenAiFunction>

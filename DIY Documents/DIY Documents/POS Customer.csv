@@ -1,0 +1,6 @@
+Transaction Id,Customer Number,Store Number,Name,Phone Number,Email,Transaction Date,Total Transaction Amount
+20240517-583291,651038982,5875,Marck,+1 (317) 555-0199,msmith@example.com,12/28/2025,235.45
+20231108-104872,651038982,5765,Martin,,marksmith@example.com,1/12/2026,123.45
+20251229-992014,451230324,4665,Jacob,+1 (617) 726-5395,jacob.taylor@sample.org,11/2/2025,34.45
+20240703-218457,742001986,5215,Henry,+1 (617) 726-5395,henry.creel@sample.org,1/6/2025,348.9
+20260311-730589,341510629,5985,Millie,+1 (512) 378-3586,brown.millie@mail.com,1/16/2026,186.4

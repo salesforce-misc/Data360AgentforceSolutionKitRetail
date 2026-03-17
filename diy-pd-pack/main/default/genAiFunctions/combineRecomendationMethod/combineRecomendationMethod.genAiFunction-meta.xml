@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This action execute when customer asks abouts anything I should pick up and provide the response (along with recommended products)</description>
+    <developerName>combineRecomendationMethod</developerName>
+    <invocationTarget>combineRecomendationMethod</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>combineRecomendationMethod</localDeveloperName>
+    <masterLabel>combineRecomendationMethod</masterLabel>
+</GenAiFunction>

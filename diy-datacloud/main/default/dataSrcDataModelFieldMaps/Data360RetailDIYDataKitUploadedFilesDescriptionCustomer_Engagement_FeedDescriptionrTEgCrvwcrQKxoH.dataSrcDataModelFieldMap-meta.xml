@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSrcDataModelFieldMap xmlns="http://soap.sforce.com/2006/04/metadata">
+    <filterApplied>false</filterApplied>
+    <masterLabel>Data360RetailDIYDataKitUploadedFilesDescriptionCustomer_Engagement_FeedDescriptionrTEgCrvwcrQKxoH</masterLabel>
+    <sourceField>Customer_Engagement_Feed5.Description__c</sourceField>
+    <targetField>Customer_Engagement_Feed__dlm.Description__c</targetField>
+    <templateVersion>1</templateVersion>
+    <versionNumber>1.0</versionNumber>
+</DataSrcDataModelFieldMap>

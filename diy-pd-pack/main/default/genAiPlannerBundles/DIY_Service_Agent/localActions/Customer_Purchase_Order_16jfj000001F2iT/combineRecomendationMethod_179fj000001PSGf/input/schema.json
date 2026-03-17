@@ -1,0 +1,22 @@
+{
+  "required" : [ "Input:contactId", "Input:requestType" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:contactId" : {
+      "title" : "contactId",
+      "description" : "Pass the Id of Contact Record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:requestType" : {
+      "title" : "requestType",
+      "description" : "Pass the request type as STORAGE_PRODUCTS",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

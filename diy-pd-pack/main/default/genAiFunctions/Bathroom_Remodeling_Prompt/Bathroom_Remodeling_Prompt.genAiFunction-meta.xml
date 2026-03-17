@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This action used to get execute when customer asks query regarding bathroom modeling and display exact prompt response(It will identify and display the category and ask user to select one of them)</description>
+    <developerName>Bathroom_Remodeling_Prompt</developerName>
+    <invocationTarget>Bathroom_Remodeling_Prompt</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Bathroom_Remodeling_Prompt</localDeveloperName>
+    <masterLabel>Bathroom Remodeling Prompt</masterLabel>
+</GenAiFunction>

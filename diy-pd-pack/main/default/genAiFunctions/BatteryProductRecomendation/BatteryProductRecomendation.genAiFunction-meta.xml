@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This action get execute if customer ask about upgrading my tools and display the prompt response(along with message of past purchase battery product and recommend other tools)</description>
+    <developerName>BatteryProductRecomendation</developerName>
+    <invocationTarget>BatteryProductRecomendation</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>BatteryProductRecomendation</localDeveloperName>
+    <masterLabel>BatteryProductRecomendation</masterLabel>
+</GenAiFunction>

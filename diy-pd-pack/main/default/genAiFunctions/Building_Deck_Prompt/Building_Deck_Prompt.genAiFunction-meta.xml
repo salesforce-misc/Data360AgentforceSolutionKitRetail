@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This action used to get execute when customer asking a question related to building a deck, and display exact prompt response.</description>
+    <developerName>Building_Deck_Prompt</developerName>
+    <invocationTarget>Building_Deck_Prompt</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Building_Deck_Prompt</localDeveloperName>
+    <masterLabel>Building Deck Prompt</masterLabel>
+</GenAiFunction>

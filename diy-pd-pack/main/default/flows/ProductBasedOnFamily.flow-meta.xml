@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Add_Prompt_Instructions_1</name>
+        <elementSubtype>AddPromptInstructions</elementSubtype>
+        <label>Add Prompt Instructions 1</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Output.Prompt</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>ProductName: {!ForEachProduct.ssot__Name__c}
+DisplayUrl:{!ForEachProduct.Display_URL__c}
+Description:{!ForEachProduct.ssot__Description__c}
+</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>ForEachProduct</targetReference>
+        </connector>
+    </assignments>
+    <environments>Default</environments>
+    <interviewLabel>ProductBasedOnFamily {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>ProductBasedOnFamily</label>
+    <loops>
+        <name>ForEachProduct</name>
+        <label>ForEachProduct</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>Get_Season_Based_Product</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Add_Prompt_Instructions_1</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>PromptFlow</processType>
+    <recordLookups>
+        <name>Get_Season_Based_Product</name>
+        <label>Get Season Based Product</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>ForEachProduct</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ssot__ProductFamily__c</field>
+            <operator>Contains</operator>
+            <value>
+                <elementReference>Season</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>ssot__Product__dlm</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Season_Based_Product</targetReference>
+        </connector>
+        <triggerType>Capability</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>Season</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

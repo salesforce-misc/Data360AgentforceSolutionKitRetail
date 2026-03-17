@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "Name": "HVAC Installation",
+      "AccountId": "@accountRef1",
+      "CurrencyIsoCode": "USD",
+      "InstallDate": "2019-01-27",
+      "Product2Id": "@productRef74",
+      "PurchaseDate": "2019-01-20",
+      "SerialNumber": 6790129732,
+      "Status": "Installed",
+      "attributes": {"type": "Asset", "referenceId": "assetRef1" }
+    }
+  ]
+}

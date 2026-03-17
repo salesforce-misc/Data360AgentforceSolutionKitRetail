@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Returns only the HVAC warranty/tune-up message based on the most recent eligible HVAC order.</description>
+    <developerName>Get_HVAC_Warranty_Message</developerName>
+    <invocationTarget>HVACWarrantyService</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Get_HVAC_Warranty_Message</localDeveloperName>
+    <masterLabel>Get HVAC Warranty Message</masterLabel>
+</GenAiFunction>

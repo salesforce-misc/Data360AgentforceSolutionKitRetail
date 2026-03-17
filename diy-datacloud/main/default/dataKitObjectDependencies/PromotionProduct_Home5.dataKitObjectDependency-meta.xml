@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectDependency xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataPackageKitDef>Data360RetailDIYDataKit</dataPackageKitDef>
+    <developerName>PromotionProduct_Home5</developerName>
+    <masterLabel>PromotionProduct_Home__dll</masterLabel>
+    <sourceObject>PromotionProduct_Home7</sourceObject>
+    <sourceObjectType>DataSourceObject</sourceObjectType>
+    <targetObject>PromotionProduct_Home6</targetObject>
+</DataKitObjectDependency>

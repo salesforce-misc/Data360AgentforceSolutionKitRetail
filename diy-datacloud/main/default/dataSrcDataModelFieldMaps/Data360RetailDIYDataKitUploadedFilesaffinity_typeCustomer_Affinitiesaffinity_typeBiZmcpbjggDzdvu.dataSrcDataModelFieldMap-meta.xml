@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSrcDataModelFieldMap xmlns="http://soap.sforce.com/2006/04/metadata">
+    <filterApplied>false</filterApplied>
+    <masterLabel>Data360RetailDIYDataKitUploadedFilesaffinity_typeCustomer_Affinitiesaffinity_typeBiZmcpbjggDzdvu</masterLabel>
+    <sourceField>Customer_Affinities34.affinity_type__c</sourceField>
+    <targetField>Customer_Affinities__dlm.affinity_type__c</targetField>
+    <templateVersion>1</templateVersion>
+    <versionNumber>1.0</versionNumber>
+</DataSrcDataModelFieldMap>

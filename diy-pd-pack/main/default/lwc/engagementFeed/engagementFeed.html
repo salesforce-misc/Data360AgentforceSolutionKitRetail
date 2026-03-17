@@ -1,0 +1,77 @@
+<template>
+    <lightning-card>
+
+        <!-- HEADER -->
+        <div class="feed-header">
+
+            <div class="header-icon">
+                <lightning-icon
+                    icon-name="utility:chart"
+                    size="small"
+                ></lightning-icon>
+            </div>
+
+            <div class="header-title">
+                Engagement Feed
+            </div>
+
+        </div>
+
+        <!-- LOADING -->
+        <template if:true={isLoading}>
+            <lightning-spinner size="small"></lightning-spinner>
+        </template>
+
+        <!-- FEED -->
+        <template if:false={isLoading}>
+
+            <ul class="feed-list">
+
+                <template for:each={feedItems} for:item="item">
+
+                    <li key={item.id} class="feed-item">
+
+                        <!-- TIMELINE -->
+                        <div class="timeline">
+
+                            <span
+                                class="icon-circle"
+                                style={item.iconStyle}
+                            >
+                                <lightning-icon
+                                    icon-name={item.icon}
+                                    size="x-small"
+                                ></lightning-icon>
+                            </span>
+
+                            <div class={item.lineClass}></div>
+
+                        </div>
+
+                        <!-- CONTENT -->
+                        <div class="feed-content">
+
+                            <div class="feed-heading">
+                                {item.title}
+                            </div>
+
+                            <div class="feed-subtext">
+                                {item.description}
+                            </div>
+
+                            <div class="feed-time">
+                                {item.eventTime}
+                            </div>
+
+                        </div>
+
+                    </li>
+
+                </template>
+
+            </ul>
+
+        </template>
+
+    </lightning-card>
+</template>

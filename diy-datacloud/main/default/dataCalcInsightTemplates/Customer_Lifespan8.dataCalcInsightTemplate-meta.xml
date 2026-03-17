@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCalcInsightTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <builderExpression xsi:nil="true"/>
+    <creationType>Custom</creationType>
+    <dataspaceName>default</dataspaceName>
+    <dataspacePrefix xsi:nil="true"/>
+    <definitionType>CALCULATED_METRIC</definitionType>
+    <description>The average length of a customer&apos;s relationship with the company/brand</description>
+    <developerName>Customer_Lifespan8</developerName>
+    <expression>SELECT UnifiedssotIndividualReal__dlm.ssot__Id__c as unifiedindividualid__c, MIN(ssot__SalesOrder__dlm.ssot__OrderStartDate__c) as First_Order_Date__c, (MONTHS_BETWEEN(CURRENT_DATE(), MIN(ssot__SalesOrder__dlm.ssot__OrderStartDate__c)),0) as Customer_Since_Months__c FROM UnifiedssotIndividualReal__dlm JOIN UnifiedLinkssotIndividualReal__dlm ON UnifiedssotIndividualReal__dlm.ssot__Id__c = UnifiedLinkssotIndividualReal__dlm.UnifiedRecordId__c JOIN ssot__SalesOrder__dlm ON UnifiedLinkssotIndividualReal__dlm.SourceRecordId__c = ssot__SalesOrder__dlm.ssot__SoldToCustomerId__c GROUP BY unifiedindividualid__c</expression>
+    <masterLabel>Customer Lifespan</masterLabel>
+    <scheduleInterval>0</scheduleInterval>
+    <sourceObjectDevName>Customer_Lifespan</sourceObjectDevName>
+    <templateVersion>1</templateVersion>
+</DataCalcInsightTemplate>

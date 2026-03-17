@@ -1,0 +1,92 @@
+.feed-header {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.header-icon {
+    width: 32px;
+    height: 32px;
+    background: #f9c90c;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 10px;
+}
+
+.header-icon lightning-icon {
+    --sds-c-icon-color-foreground-default: white;
+}
+
+.header-title {
+    font-weight: 700;
+    color: #032d60;
+}
+
+
+.feed-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.feed-item {
+    display: flex;
+    padding: 12px;
+}
+
+.timeline {
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.icon-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle lightning-icon {
+    --sds-c-icon-color-foreground-default: currentColor;
+}
+
+.line {
+    width: 2px;
+    flex: 1;
+    background: #ddd;
+    margin-top: 5px;
+}
+
+.line--hidden {
+    background: transparent;
+}
+
+.feed-content {
+    flex: 1;
+}
+
+.feed-heading {
+    font-weight: 600;
+}
+
+.feed-subtext {
+    font-size: 12px;
+    color: #666;
+}
+
+.feed-time {
+    font-size: 11px;
+    color: #888;
+}

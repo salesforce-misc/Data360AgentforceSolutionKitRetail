@@ -1,0 +1,34 @@
+<template>
+  <lightning-card title="Customer Metrics" icon-name="utility:metrics">
+
+    <!-- Customer Since -->
+    <div style="display:flex; align-items:center; gap:0.5rem; min-width:0; margin:1.25rem 0; padding:0 0.75rem;">
+      <span
+        style="font-weight:bold; font-size:0.800rem; flex:1 1 auto; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+        title="Customer Since">
+        Customer Since:
+      </span>
+
+      <span
+        style="font-weight:bold; font-size:0.890rem; flex:0 0 auto; white-space:nowrap;"
+        title={customerSince}>
+        {customerSince}
+      </span>
+    </div>
+
+    <!-- Average Order Value -->
+    <div style="display:flex; align-items:center; gap:0.5rem; min-width:0; margin:0.25rem 0; padding:0 0.75rem;">
+      <span
+        style="font-weight:bold; font-size:0.800rem; flex:1 1 auto; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+        title="Average Order Value (Lifetime)">
+        Average Order Value (Lifetime):
+      </span>
+
+      <span
+        style="font-weight:bold; font-size:0.890rem; flex:0 0 auto; white-space:nowrap;">
+        ${averageOrderValue}
+      </span>
+    </div>
+
+  </lightning-card>
+</template>

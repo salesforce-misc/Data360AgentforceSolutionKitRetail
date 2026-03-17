@@ -1,0 +1,19 @@
+<template>
+    <div class="two-column-layout">
+        <!-- LEFT CAROUSEL -->
+        <div class="column">
+            <c-product-carousel
+                title={leftCarouselTitle}
+                type="recent">
+            </c-product-carousel>
+        </div>
+
+        <!-- RIGHT CAROUSEL -->
+        <div class="column">
+            <c-product-carousel
+                title="Items on Sales"
+                type="discount">
+            </c-product-carousel>
+        </div>
+    </div>
+</template>

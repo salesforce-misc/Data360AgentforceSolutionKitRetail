@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCalcInsightTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <builderExpression xsi:nil="true"/>
+    <creationType>Custom</creationType>
+    <dataspaceName>default</dataspaceName>
+    <dataspacePrefix xsi:nil="true"/>
+    <definitionType>CALCULATED_METRIC</definitionType>
+    <description>The total revenue from a Customer entirety of their relationship with the Company/Brand</description>
+    <developerName>Customer_Lifetime_Value8</developerName>
+    <expression>SELECT 
+   UnifiedssotIndividualReal__dlm.ssot__Id__c as unifiedindividualid__c, 
+   MAX(Average_Purchase_Value__cio.APV__c * (Average_Purchase_Frequency__cio.count_orders_placed__c/Average_Purchase_Frequency__cio.count_unique_customers__c) * (Customer_Lifespan__cio.Customer_Since_Months__c/12)) as CLV__c 
+FROM 
+   UnifiedssotIndividualReal__dlm 
+JOIN 
+   Average_Purchase_Value__cio 
+ON 
+   Average_Purchase_Value__cio.unifiedindividualid__c = UnifiedssotIndividualReal__dlm.ssot__Id__c 
+JOIN 
+   Average_Purchase_Frequency__cio 
+ON 
+   Average_Purchase_Frequency__cio.unifiedindividualid__c = UnifiedssotIndividualReal__dlm.ssot__Id__c 
+JOIN 
+   Customer_Lifespan__cio 
+ON 
+   Customer_Lifespan__cio.unifiedindividualid__c = UnifiedssotIndividualReal__dlm.ssot__Id__c 
+GROUP BY 
+   UnifiedssotIndividualReal__dlm.ssot__Id__c</expression>
+    <masterLabel>Customer Lifetime Value</masterLabel>
+    <scheduleInterval>0</scheduleInterval>
+    <sourceObjectDevName>Customer_Lifetime_Value</sourceObjectDevName>
+    <templateVersion>1</templateVersion>
+</DataCalcInsightTemplate>

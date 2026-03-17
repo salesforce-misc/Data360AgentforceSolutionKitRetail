@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+	<types>
+		<members>ESA_Web_Deployment</members>
+		<name>EmbeddedServiceConfig</name>
+	</types>	
+	<types>
+		<members>Route_Conversations_to_Agentforce_Service_Agents</members>
+		<name>Flow</name>
+	</types>	
+	<types>
+		<members>ESA_Channel</members>
+		<name>MessagingChannel</name>
+	</types>	
+	<types>
+		<members>Messaging_Queue</members>
+		<name>Queue</name>
+	</types>
+	<types>
+		<members>Messaging_Routing_Channel</members>
+		<name>QueueRoutingConfig</name>
+	</types>
+	
+	
+	<version>66.0</version>
+</Package>

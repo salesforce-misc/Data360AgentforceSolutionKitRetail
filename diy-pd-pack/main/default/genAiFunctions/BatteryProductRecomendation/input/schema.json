@@ -1,0 +1,21 @@
+{
+  "required" : [ "Input:contactId", "Input:requestType" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:contactId" : {
+      "title" : "contactId",
+      "description" : "Id of Contact Record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:requestType" : {
+      "title" : "requestType",
+      "description" : "BATTERY_PRODUCTS",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "attributes": {"type": "PromotionProduct", "referenceId": "promoProdRef1"},
+      "PromotionId": "@promotionRef1",
+      "ProductId": "@productRef1"
+    },
+    {
+      "attributes": {"type": "PromotionProduct", "referenceId": "promoProdRef2"},
+      "PromotionId": "@promotionRef2",
+      "ProductId": "@productRef2"
+    },
+    {
+      "attributes": {"type": "PromotionProduct", "referenceId": "promoProdRef3"},
+      "PromotionId": "@promotionRef3",
+      "ProductId": "@productRef5"
+    },
+    {
+      "attributes": {"type": "PromotionProduct", "referenceId": "promoProdRef4"},
+      "PromotionId": "@promotionRef4",
+      "ProductId": "@productRef3"
+    },
+    {
+      "attributes": {"type": "PromotionProduct", "referenceId": "promoProdRef5"},
+      "PromotionId": "@promotionRef5",
+      "ProductId": "@productRef4"
+    },
+    {
+      "attributes": {"type": "PromotionProduct", "referenceId": "promoProdRef6"},
+      "PromotionId": "@promotionRef7",
+      "ProductId": "@productRef43"
+    },
+    {
+      "attributes": {"type": "PromotionProduct", "referenceId": "promoProdRef7"},
+      "PromotionId": "@promotionRef8",
+      "ProductId": "@productRef7"
+    },
+    {
+      "attributes": {"type": "PromotionProduct", "referenceId": "promoProdRef8"},
+      "PromotionId": "@promotionRef9",
+      "ProductId": "@productRef8"
+    },
+    {
+      "attributes": {"type": "PromotionProduct", "referenceId": "promoProdRef9"},
+      "PromotionId": "@promotionRef10",
+      "ProductId": "@productRef27"
+    }
+  ]
+}

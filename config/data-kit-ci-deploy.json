@@ -1,0 +1,13 @@
+{
+    "components": [
+        {
+            "type": "CalculatedInsight",
+            "config": {
+                "apiName": "Average_Purchase_Value__cio",
+                "apiNameOverride": "Average_Purchase_Value",
+                "label": "Average Purchase Value",
+                "publishInterval":"NotScheduled"
+            }
+        }
+    ]
+}

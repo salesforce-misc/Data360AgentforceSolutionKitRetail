@@ -1,0 +1,88 @@
+[
+ {
+    "sobject": "Account",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "accounts.json"
+    ]
+  },
+  {
+    "sobject": "Product2",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "products.json"
+    ]
+  },
+  {    "sobject": "Pricebook2",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "pricebooks.json"
+    ]
+  },
+  {    "sobject": "PricebookEntry",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "pricebookentries.json"
+    ]
+  },
+  {
+    "sobject":"Asset",
+    "saveRefs": true, 
+    "resolveRefs": true,
+    "files": [
+      "assets.json"
+    ]
+  },
+  {
+    "sobject":"AssetWarranty",
+    "saveRefs": true, 
+    "resolveRefs": true,
+    "files": [
+      "assetwarranties.json"
+    ]
+  },
+  {
+    "sobject": "Promotion",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "promotions.json"
+    ]
+  },
+  {
+    "sobject": "PromotionProduct",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "promotionproducts.json"
+    ]
+  },
+  {
+    "sobject": "Order",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "orders.json"
+    ]
+  },
+  {
+    "sobject": "OrderItem",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "orderitems.json"
+    ]
+  },
+  {
+    "sobject": "ServiceAppointment",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "serviceappointments.json"
+    ]
+  }
+]

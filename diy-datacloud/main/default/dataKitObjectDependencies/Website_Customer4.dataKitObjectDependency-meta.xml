@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectDependency xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataPackageKitDef>Data360RetailDIYDataKit</dataPackageKitDef>
+    <developerName>Website_Customer4</developerName>
+    <masterLabel>Website_Customer__dll</masterLabel>
+    <sourceObject>Website_Customer4</sourceObject>
+    <sourceObjectType>DataSourceObject</sourceObjectType>
+    <targetObject>Website_Customer4</targetObject>
+</DataKitObjectDependency>

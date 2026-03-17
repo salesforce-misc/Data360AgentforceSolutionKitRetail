@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPackageKitObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Unified_Contact_Profile_Information</masterLabel>
+    <parentDataPackageKitDefinitionName>Data360RetailDIYDataKit</parentDataPackageKitDefinitionName>
+    <referenceObjectName>Contact.Customer_MaritalStatus__c</referenceObjectName>
+    <referenceObjectType>CustomFieldDefinition</referenceObjectType>
+</DataPackageKitObject>

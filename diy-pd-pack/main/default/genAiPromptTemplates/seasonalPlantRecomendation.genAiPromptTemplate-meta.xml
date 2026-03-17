@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>7ZdSgvdRL4Xb/KyZz4Lyp2A8By563ZXj/MnJmMk89aY=_2</activeVersionIdentifier>
+    <developerName>seasonalPlantRecomendation</developerName>
+    <masterLabel>seasonalPlantRecomendation</masterLabel>
+   
+    <templateVersions>
+        <content>Objective: You are an AI expert and your job is to retrieve the information from retriever and provide the information about how to protect the plants as per the season and recommend some products.
+
+Question: {!$Input:Question}
+Instructions:
+1. You can use following information to answer the question :DIY_SEASONAL_RETRIEVER
+2. Display all the information from the retriever&apos;s  retrieved result , do not merge and skip any content.
+3. Do not add any extra information.
+4. Invoke the flow &quot;{!$Flow:Fetch_Seasonal_Products.Prompt}&quot; and pass the {!$Input:Question}
+5. Based on the flow result, recommend / suggest minimum 3 products mentioned in  retriever&apos;s retrieved result.
+6. Display Product Details in below format:
+Product Name: &lt;from flow result&gt;
+Description:  &lt;from flow result&gt;
+Display Url:  &lt;from flow result&gt;
+7. Shorten Description of Product 
+</content>
+        <inputs>
+            <apiName>Question</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Question</masterLabel>
+            <referenceName>Input:Question</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+<!--        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/File_ADL_Diy_Seasonal_1Cx_96ba4896ddb</definition>
+            <description>File_ADL_Diy_Seasonal</description>
+            <label>File_ADL_Diy_Seasonal</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Question}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://List&lt;String&gt;</definition>
+                <isRequired>false</isRequired>
+                <parameterName>outputFieldNames</parameterName>
+                <valueExpression>[&quot;Chunk&quot;]</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:File_ADL_Diy_Seasonal_1Cx_96ba4896ddb</referenceName>
+        </templateDataProviders>-->
+        <templateDataProviders>
+            <definition>flow://Fetch_Seasonal_Products</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Question</parameterName>
+                <valueExpression>{!$Input:Question}</valueExpression>
+            </parameters>
+            <referenceName>Flow:Fetch_Seasonal_Products</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>7ZdSgvdRL4Xb/KyZz4Lyp2A8By563ZXj/MnJmMk89aY=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

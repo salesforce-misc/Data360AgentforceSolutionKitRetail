@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Seasonal Product</description>
+    <developerName>Seasonal_Product_Recommender</developerName>
+    <invocationTarget>Seasonal_Product_Recommender</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Seasonal_Product_Recommender</localDeveloperName>
+    <masterLabel>Seasonal Product Recommender</masterLabel>
+</GenAiFunction>

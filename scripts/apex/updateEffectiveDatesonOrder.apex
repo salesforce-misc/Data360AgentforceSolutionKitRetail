@@ -1,0 +1,1 @@
+DIYStoreUtil.updateEffectiveDate();

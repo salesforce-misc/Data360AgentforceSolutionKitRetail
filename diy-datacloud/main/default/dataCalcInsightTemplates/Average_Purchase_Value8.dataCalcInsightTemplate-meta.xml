@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCalcInsightTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <builderExpression xsi:nil="true"/>
+    <creationType>Custom</creationType>
+    <dataspaceName>default</dataspaceName>
+    <dataspacePrefix xsi:nil="true"/>
+    <definitionType>CALCULATED_METRIC</definitionType>
+    <description>Average amount a Customer spent per Order, in the current Year</description>
+    <developerName>Average_Purchase_Value8</developerName>
+    <expression>SELECT 
+   UnifiedssotIndividualReal__dlm.ssot__Id__c as unifiedindividualid__c, 
+   ( SUM(ssot__SalesOrder__dlm.ssot__GrandTotalAmount__c)/COUNT(ssot__SalesOrder__dlm.ssot__Id__c) ) as APV__c 
+FROM 
+   UnifiedssotIndividualReal__dlm 
+JOIN 
+   UnifiedLinkssotIndividualReal__dlm 
+ON 
+   UnifiedssotIndividualReal__dlm.ssot__Id__c = UnifiedLinkssotIndividualReal__dlm.UnifiedRecordId__c 
+JOIN 
+   ssot__SalesOrder__dlm 
+ON 
+   UnifiedLinkssotIndividualReal__dlm.SourceRecordId__c = ssot__SalesOrder__dlm.ssot__SoldToCustomerId__c AND 
+   year(ssot__SalesOrder__dlm.ssot__OrderStartDate__c) = year(CURRENT_DATE())
+GROUP BY 
+   unifiedindividualid__c</expression>
+    <masterLabel>Average Purchase Value</masterLabel>
+    <scheduleInterval>0</scheduleInterval>
+    <sourceObjectDevName>Average_Purchase_Value</sourceObjectDevName>
+    <templateVersion>1</templateVersion>
+</DataCalcInsightTemplate>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>7ZdSgvdRL4Xb/KyZz4Lyp2A8By563ZXj/MnJmMk89aY=_6</activeVersionIdentifier>
+    <developerName>BatteryProductRecomendation</developerName>
+    <masterLabel>BatteryProductRecomendation</masterLabel>
+    
+    <templateVersions>
+        <content>Objective: You are an AI expert that helps customers by recommending power and hand tools that reduce battery waste and support an environmentally friendly ecosystem.
+
+Data Provided:
+1 Run the apex class  {!$Apex:GenericProductInvocable.Prompt}by using following input :  contactId = {!$Input:contactId} and  requestType = {!$Input:requestType}
+2 The apex response returns:
+message →a string summarizing the customer’s past purchases
+ToolsProducts → a list of products (JSON or structured list)
+
+Instructions:
+1.FIRST Sentence(NON-NEGOTIABLE):
+- Output the exact value of the  message returned from apex class.
+- Do NOT modify, rephrase, add text, or include any prefix.
+- Do NOT place any blank lines or spaces before this line.
+
+2. Second sentence:
+ -Always Start second sentence with a short, catchy, natural-sounding line created by you explaining why avoiding the purchase of new batteries is beneficial for the ecosystem.
+-This catchy line must be displayed in exactly 3 lines.
+-Immediately after the catchy line:
+  1.Recommend/suggest exactly 4 products selected only from ToolsProducts
+  2.Product selection rules:
+    - 3 products from the Power Tools family
+    - 2 products from the Hand Tools family
+     -One selected product must be a Brushless Drill Driver
+ - Copy the fields Name, Description, Product Features and DisplayUrl verbatim from the selected products.
+ - Do NOT invent, rephrase, abbreviate, or add any text.
+-Output the product immediately after the catchy line in the exact format below:
+ Name: &lt;from ToolsProducts &gt;
+ Description: &lt;from ToolsProducts &gt;
+ DisplayUrl: &lt;from ToolsProducts &gt;
+-Shorten the description.
+
+Strict Constraints:
+-The first line must be from Apex message exactly. No extra sentences or context.
+-Do not assume or infer anything about customer preferences, ownership, or past purchases.
+-Use only the data explicitly provided in the Apex response.
+-Do not invent, rephrase, summarize, or correct any product data.
+-Do not add explanations, disclaimers, or extra text outside the required output.
+
+
+</content>
+        <inputs>
+            <apiName>contactId</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>contactId</masterLabel>
+            <referenceName>Input:contactId</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>requestType</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>requestType</masterLabel>
+            <referenceName>Input:requestType</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://GenericProductInvocable</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>requestType</parameterName>
+                <valueExpression>{!$Input:requestType}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>contactId</parameterName>
+                <valueExpression>{!$Input:contactId}</valueExpression>
+            </parameters>
+            <referenceName>Apex:GenericProductInvocable</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>7ZdSgvdRL4Xb/KyZz4Lyp2A8By563ZXj/MnJmMk89aY=_6</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

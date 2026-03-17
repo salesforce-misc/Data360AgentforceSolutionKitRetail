@@ -1,0 +1,24 @@
+{
+  "type" : "sfdc_cms__trustedSites",
+  "title" : "trustedSites",
+  "contentBody" : {
+    "trustedSites" : [ {
+      "isActive" : true,
+      "source" : "https://orgfarm-27e4623e19.my.site.com",
+      "sourceName" : "Site URL"
+    }, {
+      "isActive" : true,
+      "source" : "https://orgfarm-27e4623e19.my.site.com/ESWESAWebDeployment1768908454395/assets/js/bootstrap.min.js",
+      "sourceName" : "TrustedCookie"
+    }, {
+      "isActive" : true,
+      "source" : "https://*.site.com",
+      "sourceName" : "Site"
+    }, {
+      "isActive" : true,
+      "source" : "https://d2rn326tyl2v2c.cloudfront.net",
+      "sourceName" : "CloudFront Images"
+    } ]
+  },
+  "urlName" : "trustedsites"
+}

@@ -1,0 +1,65 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Checkout Layout",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "dxpStyle" : {
+            "padding" : {
+              "bottom" : "3%",
+              "left" : "8%",
+              "right" : "8%",
+              "top" : "1%"
+            }
+          },
+          "sectionColumnGutterWidth" : "1.5rem"
+        },
+        "id" : "f5f2cab5-f887-4a38-81e7-7bfa5937d024"
+      }, {
+        "attributes" : {
+          "flexAlignment" : "flex-start"
+        },
+        "id" : "04ee85c7-5287-4d1a-929e-ea8a0485bcbc"
+      }, {
+        "attributes" : {
+          "dxpStyle" : {
+            "padding" : {
+              "bottom" : "8px",
+              "left" : "0px",
+              "right" : "0px",
+              "top" : "8px"
+            }
+          },
+          "pickerButtonAlignment" : "left"
+        },
+        "id" : "d3572bc0-4609-47a6-b0d5-14fdeb0049a0"
+      }, {
+        "attributes" : {
+          "dxpStyle" : {
+            "padding" : {
+              "bottom" : "3%",
+              "left" : "8%",
+              "right" : "8%",
+              "top" : "3%"
+            }
+          }
+        },
+        "id" : "21356703-2f6e-4aa7-839b-a18eae97f1cf"
+      }, {
+        "attributes" : {
+          "dxpStyle" : {
+            "padding" : {
+              "bottom" : "8%",
+              "left" : "8%",
+              "right" : "8%",
+              "top" : "3%"
+            }
+          }
+        },
+        "id" : "61af508b-edf5-4bb0-890c-4807818bb8b1"
+      } ]
+    }
+  },
+  "urlName" : "checkout-layout"
+}

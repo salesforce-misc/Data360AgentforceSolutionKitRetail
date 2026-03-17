@@ -1,0 +1,11 @@
+.two-column-layout {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.column {
+    min-width: 0;
+}

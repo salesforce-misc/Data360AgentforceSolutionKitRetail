@@ -1,0 +1,28 @@
+<template>
+    <p>{message}</p>
+    <div class="carousel-box">
+        <div class="carousel" lwc:ref="carouselTrack">
+            <template for:each={products} for:item="product">
+                <div key={product.name} class="card">
+                    
+                    <a href={product.imageRedirectUrl} target="_blank" rel="noopener noreferrer">
+                        <img src={product.imageUrl} alt={product.name} />
+                    </a>
+
+                    <a href={product.url} class="product-name" target="_blank">
+                        {product.name}
+                    </a>
+
+                    <div class="desc">
+                        {product.description}
+                    </div>
+
+                    
+                    
+                </div>
+            </template>
+        </div>
+
+        
+    </div>
+</template>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This agent action is used to help customers in getting notified about the current sales that would interest them.</description>
+    <developerName>Generic_Product_Engine</developerName>
+    <invocationTarget>GenericProductInvocable</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Generic_Product_Engine</localDeveloperName>
+    <masterLabel>Generic Product Engine</masterLabel>
+</GenAiFunction>

@@ -1,0 +1,89 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Commerce Layout",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "dxpStyle" : {
+            "padding" : {
+              "bottom" : "0%",
+              "left" : "8%",
+              "right" : "8%",
+              "top" : "8%"
+            }
+          }
+        },
+        "id" : "8ee1ec80-2939-45c9-ae6c-2d5f97a1434a"
+      }, {
+        "attributes" : {
+          "dxpStyle" : {
+            "padding" : {
+              "bottom" : "2rem",
+              "left" : "0rem",
+              "right" : "0rem",
+              "top" : "0rem"
+            }
+          }
+        },
+        "id" : "cc2f5ad9-7c08-4715-b00d-03058835ac23"
+      }, {
+        "attributes" : {
+          "dxpStyle" : {
+            "padding" : {
+              "bottom" : "3%",
+              "left" : "8%",
+              "right" : "8%",
+              "top" : "1%"
+            }
+          },
+          "sectionColumnGutterWidth" : "1.5rem"
+        },
+        "id" : "33c3876d-ea43-43a6-9541-88f15711a9c9"
+      }, {
+        "attributes" : {
+          "flexAlignment" : "flex-start"
+        },
+        "id" : "67e7d714-d7f9-4062-b2d1-f1c415953ea2"
+      }, {
+        "attributes" : {
+          "dxpStyle" : {
+            "padding" : {
+              "bottom" : "8px",
+              "left" : "0px",
+              "right" : "0px",
+              "top" : "8px"
+            }
+          },
+          "pickerButtonAlignment" : "left"
+        },
+        "id" : "9c4e5ed9-e603-4e75-ac1c-eb363916d36f"
+      }, {
+        "attributes" : {
+          "dxpStyle" : {
+            "padding" : {
+              "bottom" : "3%",
+              "left" : "8%",
+              "right" : "8%",
+              "top" : "3%"
+            }
+          }
+        },
+        "id" : "5b0a51ef-d4bd-4aea-b1aa-81dc82e6e90d"
+      }, {
+        "attributes" : {
+          "dxpStyle" : {
+            "padding" : {
+              "bottom" : "8%",
+              "left" : "8%",
+              "right" : "8%",
+              "top" : "3%"
+            }
+          }
+        },
+        "id" : "f854317e-a505-407d-a13b-78d002f05870"
+      } ]
+    }
+  },
+  "urlName" : "commerce-layout"
+}

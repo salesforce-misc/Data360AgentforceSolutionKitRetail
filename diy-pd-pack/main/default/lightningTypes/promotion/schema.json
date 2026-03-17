@@ -1,0 +1,5 @@
+{
+  "title" : "promotion",
+  "description" : "",
+  "lightning:type" : "@apexClassType/c__PromotionOutput"
+}

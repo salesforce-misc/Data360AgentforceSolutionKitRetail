@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>7ZdSgvdRL4Xb/KyZz4Lyp2A8By563ZXj/MnJmMk89aY=_5</activeVersionIdentifier>
+    <developerName>Building_Deck_Prompt</developerName>
+    <masterLabel>Building Deck Prompt</masterLabel>
+    <templateVersions>
+        <content>Objective: You are an AI expert. When a customer asks questions related to building a deck, provide a helpful answer.
+
+Question:{!$Input:Question}
+you can use following information to answer:DIY_BUILDING_RETRIEVER
+Prompt Rules:
+1. Begin the response with exactly one catchy, customer-friendly paragraph that are directly related to the customer’s specific deck-building question.
+ -The paragraph must clearly reference the topic of the question and The tone should be enthusiastic and encouraging, as if guiding the customer through their project and display exactly 10 lines
+-Do not shorten, merge, or combine lines.
+2. Display all the information in the response.
+3. Display all the installation steps exactly.Do not change the wording, and do not skip any step for each category.
+4. Do NOT mix content from different items
+5.Your tone should be friendly and informative, as if speaking directly to the customer.
+6.Ensure your response is relevant to the specific question asked.
+7.Do NOT add any extra words, explanations, summaries, or commentary beyond the retrieved content.
+8. Do NOT use JSON. Use plain text only.
+
+</content>
+        <inputs>
+            <apiName>Question</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Question</masterLabel>
+            <referenceName>Input:Question</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+     <!--   <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/Building_a_Deck_Retriever_1Cx_96bc9aaf8da</definition>
+            <label>Building_a_Deck Retriever</label>
+            <parameters>
+                <definition>primitive://List&lt;String&gt;</definition>
+                <isRequired>false</isRequired>
+                <parameterName>outputFieldNames</parameterName>
+                <valueExpression>[&quot;Chunk&quot;]</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Question}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:Building_a_Deck_Retriever_1Cx_96bc9aaf8da</referenceName>
+        </templateDataProviders>-->
+        <versionIdentifier>7ZdSgvdRL4Xb/KyZz4Lyp2A8By563ZXj/MnJmMk89aY=_5</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <developerName xsi:nil="true"/>
+    <entityPayload>{&quot;filterCriteria&quot;:null,&quot;sourceObjectApiName&quot;:&quot;Average_Purchase_Value__cio&quot;,&quot;keyQualifierApiName&quot;:null,&quot;matchType&quot;:&quot;UNIFIED&quot;,&quot;sourceMatchKeyApiName&quot;:&quot;unifiedindividualid__c&quot;,&quot;label&quot;:&quot;Average Purchase Value default&quot;,&quot;fieldMappings&quot;:[{&quot;sourceFieldApiName&quot;:&quot;APV__c&quot;,&quot;targetFieldApiName&quot;:&quot;Average_Purchase_Value__c&quot;}],&quot;developerName&quot;:&quot;Average_Purchase_Value_default&quot;,&quot;targetObjectApiName&quot;:&quot;Contact&quot;,&quot;targetMatchKeyApiName&quot;:&quot;Id&quot;}</entityPayload>
+    <masterLabel>Average_Purchase_Value_default</masterLabel>
+    <parentDataPackageKitDefinitionName xsi:nil="true"/>
+    <sourceObject>Average_Purchase_Value_default</sourceObject>
+    <sourceObjectType>CopyFieldEnrichment</sourceObjectType>
+    <templateVersion>1</templateVersion>
+</DataKitObjectTemplate>

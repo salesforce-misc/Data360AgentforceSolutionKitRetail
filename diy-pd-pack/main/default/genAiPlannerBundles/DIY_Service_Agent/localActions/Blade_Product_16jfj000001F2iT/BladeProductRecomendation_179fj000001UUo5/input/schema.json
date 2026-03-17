@@ -1,0 +1,22 @@
+{
+  "required" : [ "Input:requestType", "Input:contactId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:requestType" : {
+      "title" : "requestType",
+      "description" : "Pass requestType as BLADE_PRODUCTS",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:contactId" : {
+      "title" : "contactId",
+      "description" : "Pass the ID of the Contact Record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

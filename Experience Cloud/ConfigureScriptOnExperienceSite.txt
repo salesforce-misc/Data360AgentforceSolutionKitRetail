@@ -1,0 +1,15 @@
+ <script type='text/javascript'>
+	var user;
+	//Listening to the Custom Event published by the LWC
+	window.addEventListener('userDetails', function(e){
+	console.log('user details: ' + JSON.stringify(e.detail));
+	user = e.detail;
+	});
+	//These hidden prechat parameters can be sent to the Omni Flow for different u
+	window.addEventListener("onEmbeddedMessagingReady",e => {
+    embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+	"userId": user.userId,
+	"contactId": user.contactId
+	});
+	});
+</script>

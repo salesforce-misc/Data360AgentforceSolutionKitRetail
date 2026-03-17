@@ -1,0 +1,11 @@
+{
+  "records": [
+    {
+      "AssetId": "@assetRef1",
+      "StartDate": "2019-01-20",
+      "EndDate": "2029-01-19",
+      "WarrantyType": "Standard",
+      "attributes": {"type": "AssetWarranty", "referenceId": "assetWarrantyRef1" }
+    }
+  ]
+}

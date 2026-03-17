@@ -1,0 +1,9 @@
+{
+"records":[
+  {
+    "attributes": {"type": "Pricebook2","referenceId": "diyPricebookRef1"},
+    "Name": "DIYStore Custom Price Book",
+    "IsActive": true
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectDependency xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataPackageKitDef>Data360RetailDIYDataKit</dataPackageKitDef>
+    <developerName>Contact_Home33</developerName>
+    <masterLabel>Contact_Home__dll</masterLabel>
+    <sourceObject>Contact_Home37</sourceObject>
+    <sourceObjectType>DataSourceObject</sourceObjectType>
+    <targetObject>Contact_Home45</targetObject>
+</DataKitObjectDependency>

@@ -1,0 +1,8 @@
+customer_id,customer_name,email,phone,affinity_type,affinity_value,score
+651038982,Mark Smith,mark.smith@example.com,+1 (317) 555-0199,Seasonality Affinity,Gardening,78
+651038982,Mark Smith,mark.smith@example.com,+1 (317) 555-0199,Project Affinity,Garden Makeover,82
+651038982,Mark Smith,mark.smith@example.com,+1 (317) 555-0199,Category Affinity,Power Tools,88
+651038982,Mark Smith,mark.smith@example.com,+1 (317) 555-0199,Brand Affinity,Milwaukee,87
+651038982,Mark Smith,mark.smith@example.com,+1 (317) 555-0199,Content Affinity,How-to Guides,68
+651038982,Mark Smith,mark.smith@example.com,+1 (317) 555-0199,Store Affinity,"9320 Corporation Drive, Indianapolis, IN 46256, United States",40
+651038982,Mark Smith,mark.smith@example.com,+1 (317) 555-0199,Product Affinity,Circular Saw; Milwaukee Ultra Circular Saw Blade; Eco Salt Ice Melt,40

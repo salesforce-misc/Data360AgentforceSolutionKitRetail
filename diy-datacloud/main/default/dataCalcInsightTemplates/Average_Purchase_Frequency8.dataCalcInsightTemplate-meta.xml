@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCalcInsightTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <builderExpression xsi:nil="true"/>
+    <creationType>Custom</creationType>
+    <dataspaceName>default</dataspaceName>
+    <dataspacePrefix xsi:nil="true"/>
+    <definitionType>CALCULATED_METRIC</definitionType>
+    <description>The average number of times a Customer makes a purchase, in the current Year</description>
+    <developerName>Average_Purchase_Frequency8</developerName>
+    <expression>SELECT 
+   UnifiedssotIndividualReal__dlm.ssot__Id__c as unifiedindividualid__c, 
+   SUM(SUBQ1.order_count__c) as count_orders_placed__c, 
+   MAX(SUBQ2.unique_customers_count__c) as count_unique_customers__c, 
+   ( SUM(SUBQ1.order_count__c)/MAX(SUBQ2.unique_customers_count__c) ) as APF__c 
+FROM 
+   UnifiedssotIndividualReal__dlm 
+JOIN 
+   ( SELECT 
+        UnifiedLinkssotIndividualReal__dlm.UnifiedRecordId__c as customer_id__c, 
+        year(ssot__SalesOrder__dlm.ssot__OrderStartDate__c) order_year__c, 
+        COUNT(ssot__SalesOrder__dlm.ssot__Id__c) as order_count__c 
+     FROM 
+        ssot__SalesOrder__dlm 
+     JOIN 
+        UnifiedLinkssotIndividualReal__dlm 
+     ON 
+        UnifiedLinkssotIndividualReal__dlm.SourceRecordId__c = ssot__SalesOrder__dlm.ssot__SoldToCustomerId__c 
+     GROUP BY 
+        UnifiedLinkssotIndividualReal__dlm.UnifiedRecordId__c, 
+        year(ssot__SalesOrder__dlm.ssot__OrderStartDate__c) 
+   ) SUBQ1 
+ON 
+   UnifiedssotIndividualReal__dlm.ssot__Id__c = SUBQ1.customer_id__c 
+JOIN 
+   (
+      SELECT 
+         year(ssot__SalesOrder__dlm.ssot__OrderStartDate__c) order_year__c, 
+         COUNT(UnifiedLinkssotIndividualReal__dlm.UnifiedRecordId__c) unique_customers_count__c 
+      FROM 
+         ssot__SalesOrder__dlm 
+      JOIN 
+         UnifiedLinkssotIndividualReal__dlm 
+      ON 
+         UnifiedLinkssotIndividualReal__dlm.SourceRecordId__c = ssot__SalesOrder__dlm.ssot__SoldToCustomerId__c 
+      GROUP BY 
+         year(ssot__SalesOrder__dlm.ssot__OrderStartDate__c) 
+   ) SUBQ2 
+ON 
+   SUBQ1.order_year__c = SUBQ2.order_year__c AND SUBQ1.order_year__c = year(CURRENT_DATE()) 
+GROUP BY 
+   unifiedindividualid__c</expression>
+    <masterLabel>Average Purchase Frequency</masterLabel>
+    <scheduleInterval>0</scheduleInterval>
+    <sourceObjectDevName>Average_Purchase_Frequency</sourceObjectDevName>
+    <templateVersion>1</templateVersion>
+</DataCalcInsightTemplate>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPackageKitObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Average_Order_Value_Lifetime_default</masterLabel>
+    <parentDataPackageKitDefinitionName>Data360RetailDIYDataKit</parentDataPackageKitDefinitionName>
+    <referenceObjectName>Contact.Average_Order_Value__c</referenceObjectName>
+    <referenceObjectType>CustomFieldDefinition</referenceObjectType>
+</DataPackageKitObject>

@@ -1,0 +1,114 @@
+{
+  "records": [
+    {
+      "attributes": {"type": "Promotion", "referenceId": "promotionRef1"},
+      "Name": "Winter Seasonal Discount Promotion",
+      "Description": "10% off Rock Salt for winter snow and ice control",
+      "PromotionCode": "ROCKSALT10",
+      "Discount__c": 10,
+      "CurrencyIsoCode": "USD",
+      "StartDate": "2026-01-16",
+      "EndDate": "2026-12-23",
+      "IsActive": true
+    },
+    {
+      "attributes": {"type": "Promotion", "referenceId": "promotionRef2"},
+      "Name": "Winter Safety Savings Campaign",
+      "Description": "$5 off eco-friendly, pet-safe ice melt",
+      "PromotionCode": "PETSAFE5",
+      "Discount__c": 5,
+      "CurrencyIsoCode": "USD",
+      "StartDate": "2026-01-16",
+      "EndDate": "2026-12-23",
+      "IsActive": true
+    },
+    {
+      "attributes": {"type": "Promotion", "referenceId": "promotionRef3"},
+      "Name": "Eco Friendly Seasonal Savings Initiative",
+      "Description": "15% off ECOSALT ice melt for eco-conscious customers",
+      "PromotionCode": "ECOSALT15",
+      "Discount__c": 15,
+      "CurrencyIsoCode": "USD",
+      "StartDate": "2026-01-16",
+      "EndDate": "2026-12-23",
+      "IsActive": true
+    },
+    {
+      "attributes": {"type": "Promotion", "referenceId": "promotionRef4"},
+      "Name": "Professional Equipment Savings Event",
+      "Description": "$20 off Circular Saw for DIY and contractor use",
+      "PromotionCode": "SAW20",
+      "Discount__c": 20,
+      "CurrencyIsoCode": "USD",
+      "StartDate": "2026-01-16",
+      "EndDate": "2026-12-23",
+      "IsActive": true
+    },
+    {
+      "attributes": {"type": "Promotion", "referenceId": "promotionRef5"},
+      "Name": "Contractor Value Promotion Program",
+      "Description": "12% discount on Hammer Drill for professional projects",
+      "PromotionCode": "DRILL12",
+      "Discount__c": 12,
+      "CurrencyIsoCode": "USD",
+      "StartDate": "2026-01-16",
+      "EndDate": "2026-12-23",
+      "IsActive": true
+    },
+    {
+      "attributes": {"type": "Promotion", "referenceId": "promotionRef6"},
+      "Name": "Tool Storage Efficiency Savings Promotion",
+      "Description": "A promotional savings offer providing 15% off on eligible tool?storage solutions.",
+      "PromotionCode": "TSESP15",
+      "Discount__c": 15,
+      "CurrencyIsoCode": "USD",
+      "StartDate": "2026-01-16",
+      "EndDate": "2026-12-23",
+      "IsActive": true
+    },
+    {
+      "attributes": {"type": "Promotion", "referenceId": "promotionRef7"},
+      "Name": "SafeWork Savings",
+      "Description": "10% off Dust Masks for clean air protection",
+      "PromotionCode": "DMASK10",
+      "Discount__c": 10,
+      "CurrencyIsoCode": "USD",
+      "StartDate": "2026-02-06",
+      "EndDate": "2027-01-16",
+      "IsActive": true
+    },
+    {
+      "attributes": {"type": "Promotion", "referenceId": "promotionRef8"},
+      "Name": "Craftsman Level Up Sale",
+      "Description": "15% off 9?inch Levels for accurate alignment",
+      "PromotionCode": "LEVEL15",
+      "Discount__c": 15,
+      "CurrencyIsoCode": "USD",
+      "StartDate": "2026-02-06",
+      "EndDate": "2027-01-16",
+      "IsActive": true
+    },
+    {
+      "attributes": {"type": "Promotion", "referenceId": "promotionRef9"},
+      "Name": "ProTile Power Deal",
+      "Description": "12% off Tile Cutters for precise tile cutting",
+      "PromotionCode": "TCUT12",
+      "Discount__c": 12,
+      "CurrencyIsoCode": "USD",
+      "StartDate": "2026-02-06",
+      "EndDate": "2027-01-16",
+      "IsActive": true
+    },
+    {
+      "attributes": {"type": "Promotion", "referenceId": "promotionRef10"},
+      "Name": "Bathroom Elegance Offer",
+      "Description": "8% off Towel Racks for organized bathroom spaces",
+      "PromotionCode": "TWRK8",
+      "Discount__c": 8,
+      "CurrencyIsoCode": "USD",
+      "StartDate": "2026-02-06",
+      "EndDate": "2027-01-16",
+      "IsActive": true
+    }
+  ]
+}

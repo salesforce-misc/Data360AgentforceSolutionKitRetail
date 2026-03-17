@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>7ZdSgvdRL4Xb/KyZz4Lyp2A8By563ZXj/MnJmMk89aY=_9</activeVersionIdentifier>
+    <developerName>storageCabinetDetails</developerName>
+    <masterLabel>storageCabinetDetails</masterLabel>
+ 
+    <templateVersions>
+        <content>Objective: You are an AI expert , your job is provide helpful and useful information for queries like Handling the Logistics of a Large Storage Cabinet
+
+Question: {!$Input:Question}
+You can use following information to answer the question :DIY_BATHROOM_RETRIEVER
+
+Instructions:
+1. Do not skip or hide content related to storage.
+2. Do not ask any follow up question for customer.
+3. Your tone should be friendly and informative, as if you were speaking directly to the customer.
+4. Do Not change the words.
+5. Do not display any contact related information or any company name.
+6. Display the response in bullet points
+</content>
+        <inputs>
+            <apiName>Question</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Question</masterLabel>
+            <referenceName>Input:Question</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+      <!--  <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/DIY_Bathroom_Retriever_1Cx_96b30e02021</definition>
+            <label>DIY_Bathroom Retriever</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Question}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://List&lt;String&gt;</definition>
+                <isRequired>false</isRequired>
+                <parameterName>outputFieldNames</parameterName>
+                <valueExpression>[&quot;Chunk&quot;]</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:DIY_Bathroom_Retriever_1Cx_96b30e02021</referenceName>
+        </templateDataProviders>-->
+        <versionIdentifier>7ZdSgvdRL4Xb/KyZz4Lyp2A8By563ZXj/MnJmMk89aY=_9</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

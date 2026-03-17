@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This action gets execute to provide the information(feature and description) for customer purchased blade</description>
+    <developerName>BladeProductRecomendation</developerName>
+    <invocationTarget>BladeProductRecomendation</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>BladeProductRecomendation</localDeveloperName>
+    <masterLabel>BladeProductRecomendation</masterLabel>
+</GenAiFunction>

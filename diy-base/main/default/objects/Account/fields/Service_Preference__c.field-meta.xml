@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Preference__c</fullName>
+    <label>Service Preference</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Do It For Me</fullName>
+                <default>false</default>
+                <label>Do It For Me</label>
+            </value>
+            <value>
+                <fullName>Do It Yourself</fullName>
+                <default>false</default>
+                <label>Do It Yourself</label>
+            </value>
+            <value>
+                <fullName>Remote Support</fullName>
+                <default>false</default>
+                <label>Remote Support</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,55 @@
+<template>
+    <div class="carousel-box">
+        <h3 class="carousel-title">{title}</h3>
+
+        <div class="carousel" lwc:ref="carouselTrack">
+            <template for:each={products} for:item="product">
+                <div key={product.name} class="card">
+                    <!-- IMAGE -->
+                    <a
+                        href={product.imageRedirectUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img src={product.imageUrl} alt={product.name} />
+                    </a>
+
+                    <!-- NAME WITH LINK -->
+                    <a href={product.url}
+                    class="product-name"
+                    target="_blank">
+                        {product.name}
+                    </a>
+
+                    <!-- STARS -->
+                    <div class="stars">
+                        ⭐⭐⭐⭐⭐
+                        <span class="review-count">({product.reviews})</span>
+                    </div>
+
+                    <!-- PRICE -->
+                    <div class="price">${product.price}</div>
+
+                    <!-- BUTTON -->
+                    <button
+                        class="btn"
+                        data-url={product.url}
+                        onclick={handleAddToCart}>
+                        Add to Cart
+                    </button>
+                </div>
+            </template>
+        </div>
+
+        <div class="dots">
+            <template for:each={dots} for:item="dot">
+                <span
+                    key={dot.index}
+                    class={dot.className}
+                    data-index={dot.index}
+                    onclick={handleDotClick}>
+                </span>
+            </template>
+        </div>
+    </div>
+</template>

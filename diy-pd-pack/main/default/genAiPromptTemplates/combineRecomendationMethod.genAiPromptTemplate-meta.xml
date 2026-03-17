@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>7ZdSgvdRL4Xb/KyZz4Lyp2A8By563ZXj/MnJmMk89aY=_9</activeVersionIdentifier>
+    <developerName>combineRecomendationMethod</developerName>
+    <masterLabel>combineRecomendationMethod</masterLabel>
+
+    <templateVersions>
+        <content>You are a helpful sales assistant generating a personalized recommendation.
+
+Data provided:
+1. Invoke {!$Apex:GenericProductInvocable.Prompt} class by passing input as 
+ contactId = {!$Input:contactId} and 
+ requestType = {!$Input:requestType}(Always pass the value as STORAGE_PRODUCTS)
+ - The apex response returns:
+message →a string summarizing the customer’s past purchases
+StorageProducts→ a list of products (JSON or structured list)
+
+
+Instructions:
+1. First sentence:
+- Output the exact value of the message returned from apex class.
+- Do NOT modify, rephrase, add text, or include any prefix.
+- Do NOT place any blank lines or spaces before this line.
+
+2. Second sentence:
+- Start with But you don&apos;t have garage storage as well as 15% coupon also available.. Here is Recommendation:
+ - Select EXACT products from StorageProducts where description contains a word like (&apos;garages&apos;, &apos;garage&apos;, etc..). 
+ - Copy the fields Name, Description, and DisplayUrl verbatim.
+ - Do NOT invent, rephrase, abbreviate, or add any text.
+ - Output the product in the exact format:
+  Name: &lt;from StorageProducts&gt;
+  Description : &lt;from StorageProducts&gt;
+  DisplayURL: &lt;from StorageProducts&gt;
+-Shorten the ssot__Description__c
+-Recommend minimum 2 products where description contains a word like (&apos;garages&apos;, &apos;garage&apos;, etc..). 
+ - If StorageProducts is empty, output exactly:
+ &quot;No eligible storage products are available.&quot;
+
+
+Rules:
+- The first line must be from Apex message exactly. No extra sentences or context.
+-Output exactly three sentences.
+- ZERO hallucinations allowed.
+- Product names must match StorageProducts exactly.
+- Do not add additional explanations, comments, or invented benefits
+
+</content>
+        <inputs>
+            <apiName>contactId</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>contactId</masterLabel>
+            <referenceName>Input:contactId</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>requestType</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>requestType</masterLabel>
+            <referenceName>Input:requestType</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://GenericProductInvocable</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>requestType</parameterName>
+                <valueExpression>{!$Input:requestType}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>contactId</parameterName>
+                <valueExpression>{!$Input:contactId}</valueExpression>
+            </parameters>
+            <referenceName>Apex:GenericProductInvocable</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>7ZdSgvdRL4Xb/KyZz4Lyp2A8By563ZXj/MnJmMk89aY=_9</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

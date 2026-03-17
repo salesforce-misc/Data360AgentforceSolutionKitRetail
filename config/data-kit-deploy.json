@@ -1,0 +1,14 @@
+{
+  "components": [
+    {
+      "type": "DataStreamBundle",
+      "config": {
+        "connectorType": "CRM",
+        "bundleName": "CRM01",
+        "bundleConfig": {
+          "orgId": "00Dfj00000H396b"
+        }
+      }
+    }
+  ]
+}

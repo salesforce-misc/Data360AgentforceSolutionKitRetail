@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>7ZdSgvdRL4Xb/KyZz4Lyp2A8By563ZXj/MnJmMk89aY=_5</activeVersionIdentifier>
+    <developerName>BladeProductRecomendation</developerName>
+    <masterLabel>BladeProductRecomendation</masterLabel>
+     <templateVersions>
+        <content>Objective: You are an AI expert, you will help customer to provide useful information for wood cutter blade.
+
+Instructions:
+1. Invoke apex class {!$Apex:GenericProductInvocable.Prompt} by passing contactId = {!$Input:contactId} and requestType ={!$Input:requestType}
+2. Get the list of product returned from apex class 
+3. From the retrieved list of Products ,Display the Product Description, Product Features to customer.
+4. Start the response like It looks like you owe Product Name ,Display the Product Description, Product Features to customer.
+5. Description must be shorter which cover all the point
+6.Your tone should be friendly and informative, as if you were speaking directly to the customer.
+7. Do not add any extra product from your side.
+
+</content>
+        <inputs>
+            <apiName>contactId</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>contactId</masterLabel>
+            <referenceName>Input:contactId</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>requestType</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>requestType</masterLabel>
+            <referenceName>Input:requestType</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://GenericProductInvocable</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>requestType</parameterName>
+                <valueExpression>{!$Input:requestType}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>contactId</parameterName>
+                <valueExpression>{!$Input:contactId}</valueExpression>
+            </parameters>
+            <referenceName>Apex:GenericProductInvocable</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>7ZdSgvdRL4Xb/KyZz4Lyp2A8By563ZXj/MnJmMk89aY=_5</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

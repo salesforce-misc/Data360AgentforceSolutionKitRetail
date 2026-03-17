@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This action get to execute when customer ask about how to protect plants in a different season  and provide response(along with recommended products)</description>
+    <developerName>seasonalPlantRecomendation</developerName>
+    <invocationTarget>seasonalPlantRecomendation</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>seasonalPlantRecomendation</localDeveloperName>
+    <masterLabel>seasonalPlantRecomendation</masterLabel>
+</GenAiFunction>

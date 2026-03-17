@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <developerName xsi:nil="true"/>
+    <entityPayload>{&quot;relatedTargetFieldApiName&quot;:&quot;ssot__Id__c&quot;,&quot;sourceFieldApiName&quot;:&quot;ssot__SoldToCustomerId__c&quot;,&quot;dataSpaceDevName&quot;:&quot;default&quot;,&quot;parentEntityApiName&quot;:&quot;Contact&quot;,&quot;childRelationshipName&quot;:&quot;Sales_Order&quot;,&quot;unifiedObjectLinkTableApiName&quot;:&quot;UnifiedLinkssotIndividualReal__dlm&quot;,&quot;relatedTargetEntityApiName&quot;:&quot;ssot__Individual__dlm&quot;,&quot;childEntityApiName&quot;:&quot;ssot__SalesOrder__dlm&quot;,&quot;childRelationshipLabel&quot;:&quot;Sales Order&quot;}</entityPayload>
+    <masterLabel>00Nfj000037VEsv</masterLabel>
+    <parentDataPackageKitDefinitionName xsi:nil="true"/>
+    <sourceObject>00Nfj000037VEsv</sourceObject>
+    <sourceObjectType>IRRelatedListEnrichment</sourceObjectType>
+    <templateVersion>1</templateVersion>
+</DataKitObjectTemplate>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectDependency xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataPackageKitDef>Data360RetailDIYDataKit</dataPackageKitDef>
+    <developerName>Customer_Affinities32</developerName>
+    <masterLabel>Customer_Affinities__dll</masterLabel>
+    <sourceObject>Customer_Affinities35</sourceObject>
+    <sourceObjectType>DataSourceObject</sourceObjectType>
+    <targetObject>Customer_Affinities44</targetObject>
+</DataKitObjectDependency>

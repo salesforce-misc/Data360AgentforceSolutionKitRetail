@@ -1,0 +1,25 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "message" : {
+      "title" : "message",
+      "description" : "Recommendation Message",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "productsJson" : {
+      "title" : "productsJson",
+      "description" : "Recommended Products",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

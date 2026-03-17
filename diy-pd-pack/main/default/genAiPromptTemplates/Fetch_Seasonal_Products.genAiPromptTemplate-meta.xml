@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>7ZdSgvdRL4Xb/KyZz4Lyp2A8By563ZXj/MnJmMk89aY=_4</activeVersionIdentifier>
+    <developerName>Fetch_Seasonal_Products</developerName>
+    <masterLabel>Fetch Seasonal Products</masterLabel>
+ 
+    <templateVersions>
+        <content>Step 1:
+Pass the input season {!$Input:Season} to {!$Flow:ProductBasedOnFamily.Prompt}.
+
+Step 2:
+Retrieve and display all 
+Product Name, 
+Product Image, and 
+Product Description (only 2 lines)
+
+Step 3:
+Craft the final message within 5 lines:
+
+“To support your {!$Input:Season} seasonal preparation, we’ve gathered a refined set of recommendations tailored specially for you. Each product below has been selected to enhance comfort and readiness for the coming season. Explore this curated range, complete with names, images, and descriptions, designed to perfectly suit the seasonal moment.”
+
+DO NOT RECOMMEND SOME RANDOM PRODUCTS 
+Strictly pass only the output response from {!$Flow:ProductBasedOnFamily.Prompt}
+
+Return the Output JSON Structure in a way that agentforce can utilize the data from here
+
+</content>
+        <inputs>
+            <apiName>Season</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Season</masterLabel>
+            <referenceName>Input:Season</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://ProductBasedOnFamily</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Season</parameterName>
+                <valueExpression>{!$Input:Season}</valueExpression>
+            </parameters>
+            <referenceName>Flow:ProductBasedOnFamily</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>7ZdSgvdRL4Xb/KyZz4Lyp2A8By563ZXj/MnJmMk89aY=_4</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

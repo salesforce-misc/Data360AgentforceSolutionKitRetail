@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <developerName xsi:nil="true"/>
+    <entityPayload>{&quot;filterCriteria&quot;:null,&quot;sourceObjectApiName&quot;:&quot;Customer_Lifespan__cio&quot;,&quot;keyQualifierApiName&quot;:null,&quot;matchType&quot;:&quot;UNIFIED&quot;,&quot;sourceMatchKeyApiName&quot;:&quot;unifiedindividualid__c&quot;,&quot;label&quot;:&quot;Customer Lifespan default&quot;,&quot;fieldMappings&quot;:[{&quot;sourceFieldApiName&quot;:&quot;First_Order_Date__c&quot;,&quot;targetFieldApiName&quot;:&quot;Customer_Since__c&quot;}],&quot;developerName&quot;:&quot;Customer_Lifespan_default&quot;,&quot;targetObjectApiName&quot;:&quot;Contact&quot;,&quot;targetMatchKeyApiName&quot;:&quot;Id&quot;}</entityPayload>
+    <masterLabel>Customer_Lifespan_default</masterLabel>
+    <parentDataPackageKitDefinitionName xsi:nil="true"/>
+    <sourceObject>Customer_Lifespan_default</sourceObject>
+    <sourceObjectType>CopyFieldEnrichment</sourceObjectType>
+    <templateVersion>1</templateVersion>
+</DataKitObjectTemplate>

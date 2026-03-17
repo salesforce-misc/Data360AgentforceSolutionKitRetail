@@ -1,0 +1,22 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Quote",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "dxpStyle" : {
+            "margin" : {
+              "bottom" : "0%",
+              "left" : "0%",
+              "right" : "0%",
+              "top" : "0%"
+            }
+          }
+        },
+        "id" : "a5929cec-a675-4de2-9ca6-969a2b38057b"
+      } ]
+    }
+  },
+  "urlName" : "quote"
+}
