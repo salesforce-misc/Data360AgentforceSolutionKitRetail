@@ -5,7 +5,9 @@ Welcome to the DIY Storefront, a sample retail application. DIY Storefront is a 
 
 The DIY Storefront app showcases Data 360, Agents, and Prompts by using both structured and unstructured data, including Intelligent Context, to process complex information.
 
-There are 3 required steps, these steps allow you to setup Data 360, import data (both structured and unstructured), and setup the employee agent within your Salesforce instance. After completing the first three steps,the employee agent will be automatically setup within your org,  if you want to install the service agent in your own website use Step 4, and if you want to install the agent on an Experience Cloud site follow step 5. If you are satisfied with the employee agent that has the same functionality as the service agent Steps 4 & 5 are optional. 
+There are 3 required steps, these steps allow you to setup Data 360, import data (both structured and unstructured), and setup the employee agent within your Salesforce instance. After completing the first three steps,the employee agent will be automatically setup within your org,  if you want to install the service agent in your own website use Step 4, and if you want to install the agent on an Experience Cloud site follow step 5. If you are satisfied with the employee agent - that has the same functionality as the service agent, then Steps 4 & 5 are optional. 
+
+Once installation is complete, you can navigate to Sales Cloud or the DIY Store front app and search for "Mark Smith" to see all the data unified to enrich Mark Smith's profile. 
 <details><summary>
 
   ## 1. Pre-Deployment Instructions
