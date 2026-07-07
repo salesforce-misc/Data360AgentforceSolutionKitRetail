@@ -11,7 +11,7 @@
         <inputParameters>
             <name>jsonText</name>
             <value>
-                <elementReference>seasonal_product.promptResponse</elementReference>
+                <elementReference>listOut</elementReference>
             </value>
         </inputParameters>
         <nameSegment>PromptJsonToModelAction</nameSegment>
@@ -25,6 +25,7 @@
             <name>productsJson</name>
         </outputParameters>
     </actionCalls>
+
     <actionCalls>
         <name>Season_Name</name>
         <label>Season Name</label>
@@ -33,7 +34,7 @@
         <actionName>Season_Predictor</actionName>
         <actionType>generatePromptResponse</actionType>
         <connector>
-            <targetReference>SeasonValue</targetReference>
+            <targetReference>seasonal_product</targetReference>
         </connector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
@@ -56,8 +57,12 @@
         </inputParameters>
         <nameSegment>Season_Predictor</nameSegment>
         <offset>0</offset>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <outputParameters>
+            <assignToReference>Season</assignToReference>
+            <name>promptResponse</name>
+        </outputParameters>
     </actionCalls>
+
     <actionCalls>
         <name>seasonal_product</name>
         <label>seasonal product</label>
@@ -66,7 +71,7 @@
         <actionName>Fetch_Seasonal_Products</actionName>
         <actionType>generatePromptResponse</actionType>
         <connector>
-            <targetReference>output</targetReference>
+            <targetReference>Convert_Product_JSON_to_WinterProduct_Type_Action_1</targetReference>
         </connector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
@@ -77,8 +82,12 @@
         </inputParameters>
         <nameSegment>Fetch_Seasonal_Products</nameSegment>
         <offset>0</offset>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <outputParameters>
+            <assignToReference>listOut</assignToReference>
+            <name>promptResponse</name>
+        </outputParameters>
     </actionCalls>
+
     <actionCalls>
         <name>validate_ContactId</name>
         <label>validate ContactId</label>
@@ -103,8 +112,10 @@
             <name>contactId</name>
         </outputParameters>
     </actionCalls>
+
     <apiVersion>65.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+
     <assignments>
         <name>For_Guest</name>
         <label>For Guest</label>
@@ -128,6 +139,7 @@
             <targetReference>Season_Name</targetReference>
         </connector>
     </assignments>
+
     <assignments>
         <name>For_LoggedIn</name>
         <label>For LoggedIn</label>
@@ -151,38 +163,7 @@
             <targetReference>Season_Name</targetReference>
         </connector>
     </assignments>
-    <assignments>
-        <name>output</name>
-        <label>output</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>listOut</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>seasonal_product.promptResponse</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Convert_Product_JSON_to_WinterProduct_Type_Action_1</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>SeasonValue</name>
-        <label>SeasonValue</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>Season</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>Season_Name.promptResponse</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>seasonal_product</targetReference>
-        </connector>
-    </assignments>
+
     <decisions>
         <name>Check_ContactId</name>
         <label>Check ContactId</label>
@@ -215,9 +196,11 @@
             <label>Is Not Null</label>
         </rules>
     </decisions>
+
     <environments>Default</environments>
     <interviewLabel>Seasonal Product Recommender {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Seasonal Product Recommender</label>
+
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -236,7 +219,9 @@
             <stringValue>LightningFlowBuilder</stringValue>
         </value>
     </processMetadataValues>
+
     <processType>AutoLaunchedFlow</processType>
+
     <recordLookups>
         <name>Get_Account_Billing</name>
         <label>Get Account Billing</label>
@@ -258,6 +243,7 @@
         <object>Account</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+
     <recordLookups>
         <name>GetAccountIdFromContact</name>
         <label>GetAccountIdFromContact</label>
@@ -286,7 +272,9 @@
         <object>Contact</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+
     <runInMode>SystemModeWithoutSharing</runInMode>
+
     <start>
         <locationX>0</locationX>
         <locationY>0</locationY>
@@ -294,7 +282,9 @@
             <targetReference>validate_ContactId</targetReference>
         </connector>
     </start>
+
     <status>Active</status>
+
     <variables>
         <name>apexDefined</name>
         <apexClass>PromptOutputADT</apexClass>

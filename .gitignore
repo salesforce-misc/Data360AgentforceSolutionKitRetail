@@ -46,3 +46,26 @@ $RECYCLE.BIN/
 **/__pycache__/
 **/.venv/
 **/venv/
+
+# --- Credential leak prevention (Data360 installer) ---
+# These filenames have been observed in production incidents where an agent
+# or coordinator wrote OAuth tokens / session credentials to the repo root.
+# They are forbidden by .claude/agents/data360-retail-installer/AGENT.md's
+# authentication rule, but listing them here is a mechanical safety net:
+# even if a process writes one despite the rule, git refuses to commit it.
+# DO NOT remove these patterns. If a future skill needs to share creds
+# between steps, use `sf org display` at point-of-use — never a file on disk.
+sf-env.sh
+sf-auth-helper.sh
+sf-wrapper.sh
+sf_auto_login.py
+sf_auth_workaround.py
+org_creds.json
+frontdoor_url.txt
+sfdx_auth*.txt
+access_token*.txt
+auth.txt
+*.sfdxAuthUrl
+
+# Playwright MCP traces — may contain captured cookies / session IDs
+.playwright-mcp/

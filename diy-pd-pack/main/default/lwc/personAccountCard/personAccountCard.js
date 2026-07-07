@@ -63,6 +63,13 @@ export default class PersonAccountCard extends LightningElement {
             return (value || value === 0) ? (Math.round(value * 100) / 100) : '';
         }
 
+    get averageSpend() {
+        const value = this.account?.data?.Contacts?.[0]?.AverageSpend__c;
+        return value !== null && value !== undefined
+            ? value.toFixed(1)
+            : '875.0';
+    }
+
     get averagePurchaseValue() {
             const value = this.account?.data?.Contacts?.[0]?.Average_Purchase_Value__c;
             return (value || value === 0) ? (Math.round(value * 100) / 100) : '';

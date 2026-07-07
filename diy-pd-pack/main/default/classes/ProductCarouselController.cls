@@ -212,7 +212,7 @@ global class ProductCarouselController {
     private static List<ProductDTO> getDiscountedProductsFromPromotions() {
         List<ProductDTO> results = new List<ProductDTO>();
         Set<Id> addedProductIds = new Set<Id>();
-        List<ssot__PromotionOffer__dlm> promotionList = [SELECT ssot__Id__c,Discount__c,ssot__PromotionId__c FROM ssot__PromotionOffer__dlm Limit 5];
+        List<ssot__PromotionOffer__dlm> promotionList = [SELECT ssot__Id__c,Discount__c,ssot__PromotionId__c FROM ssot__PromotionOffer__dlm where Discount__c != NULL and ssot__PromotionId__c != NULL Limit 5];
         
         if(promotionList.isEmpty()){
             return results;

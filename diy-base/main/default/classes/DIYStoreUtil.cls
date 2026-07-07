@@ -55,7 +55,12 @@ public with sharing class DIYStoreUtil {
         
         if (!readyToActivate.isEmpty()) {
             update readyToActivate;
-        }        
+        }
+        
+        List<Account> accList = [Select Id from Account where Account.LastName = 'Smith' and isDIYRecord__pc = false];
+        if (!accList.isEmpty()) {
+            delete accList;
+        }
     }
     
   // Create Agent User with required Permission Set Licenses and Permission Sets
@@ -142,7 +147,7 @@ public with sharing class DIYStoreUtil {
         DIYStoreUtil.syncContactIdsForRelatedRecords();
 
         List<Order> ordersToUpdate = [ SELECT Id,Name,Status FROM Order WHERE BillToContact.isDIYRecord__c  = true
-                                      AND Name NOT IN ('HVAC Maintenance','HVAC Installation ') AND Id IN 
+                                      AND Name NOT IN ('HVAC Maintenance','HVAC Installation') AND Id IN
                                       (SELECT OrderId FROM OrderItem)];
 
         if (ordersToUpdate.isEmpty()) {
@@ -152,10 +157,9 @@ public with sharing class DIYStoreUtil {
 
         Date today = Date.today();
 
-        for (Order o : ordersToUpdate) {            
-			Integer randomDays = -1;
-            // Set EffectiveDate to random past date
-            o.EffectiveDate = today.addDays(-randomDays);
+        for (Order o : ordersToUpdate) {
+            //Integer randomDays = (Math.random() * 120).intValue() + 1;
+            o.EffectiveDate = today.addDays(-45);
             o.EndDate = today.addYears(2);
             o.Status = 'Activated';
         }
@@ -193,11 +197,12 @@ public with sharing class DIYStoreUtil {
 
         /* --------------------------------------------------
            3. Get Service Appointments (1 per Account assumed)
+              EXCLUDE appointments with ServiceTerritoryId to avoid FSL conflicts
         -------------------------------------------------- */
         List<ServiceAppointment> appointments = [
-            SELECT Id, AccountId, ContactId
+            SELECT Id, AccountId, ContactId, ServiceTerritoryId
             FROM ServiceAppointment
-            WHERE AccountId != NULL and Account.IsPersonAccount = true
+            WHERE AccountId != NULL and Account.IsPersonAccount = true and Account.isDIYRecord__pc = true and ServiceTerritoryId = NULL order by CreatedDate Desc Limit 1
         ];
 
         /* --------------------------------------------------
@@ -317,7 +322,7 @@ public with sharing class DIYStoreUtil {
                 'Customer_StorePreference__c','Customer_IncomeLevel__c',
                 'Customer_GarageSize__c','Customer_Type__c',
                 'Customer_IsWorkshopSpacePresent__c','Customer_VehicleType__c',
-                'Customer_ServicePreference__c','Customer_SkillLevel__c'
+                'Customer_ServicePreference__c','Customer_SkillLevel__c','AverageSpend__c'
                 };
                     
                     // Get Permission Set

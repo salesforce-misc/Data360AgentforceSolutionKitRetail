@@ -8,7 +8,7 @@
         <name>DIY_Service_Agent</name>
     </botMlDomain>
     <botSource>None</botSource>
-    <botUser>ufazaria@salesforce.com.diyuser</botUser>
+    <botUser>AGENT_USER_EMAIL</botUser>
     <contextVariables>
         <contextVariableMappings>
             <SObjectType>MessagingEndUser</SObjectType>
