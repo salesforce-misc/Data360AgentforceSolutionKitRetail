@@ -11,8 +11,7 @@ The DIY Storefront app showcases Data 360, Agents, and Prompts by using both str
 
 There are two ways in which you can install this solution kit, you can use Claude to run the installation process for you, or you can manually setup the solution in your org. The instructions for both are provided below. 
 
-## Automated Installation with Claude
-<details><summary>
+<details><h2><strong>Automated Installation with Claude</h2></summary>
 
   ### 1. Pre-Deployment Instructions
   To ensure a successful install, please ensure your environment is properly configured
@@ -20,6 +19,7 @@ There are two ways in which you can install this solution kit, you can use Claud
   | ----- | ----- |
   | 1 |  Ensure you have Claude, Git, and Visual Studio Code installed before running the installer. Also ensure that you have permissions to debug the Chrome browser. |
   | 2 |  Create a folder on your local desktop to store the project. This will ensure that any CLAUDE.md file you may have already created won’t interfere with the install|
+
 
   ### 2. Create your target org
  | Step | Details |
@@ -39,14 +39,14 @@ There are two ways in which you can install this solution kit, you can use Claud
   | 5 |  Once downloaded, select “Yes, I trust the authors” if prompted|
   | 6 |  When prompted, select “yes” to open the cloned project folder in VS Code|
 
- ### 3. Launch Claude
+ ### 4. Launch Claude
  | Step | Details |
   | ----- | ----- |
   | 1 |  Open Claude chat session within VS code as shown below  |
   | 2 |  Claude requires some information to get started. The instructions (prompt), an alias (can be anything), your new Demo Org username and password. |
   | 3 |  Start with the prompt <br><br>"**Install Data 360 Retail Installer into Alias: ALIASNAME Username: USERNAME Password: PASSWORD**" </br></br> <br>Replace the alias(can be anything), username and password with your own credentials (from when you created your org) and then hit enter to being the installation. Here is an example prompt:Install Data 360 Retail Installer into Alias: Data360RetailSolution Username: XXX.com Password: XXXXX</br> |
 
-### 4. Select Installation Mode
+### 5. Select Installation Mode
 
 You’ll then receive the following prompt:
 
@@ -58,7 +58,7 @@ Choose your adventure! We recommend option 2
 * Mode 1 = Data Cloud Only
 * Mode 2 = Data Cloud + Commerce + Experience Cloud + Agentforce
 
-### 5.Authenticate the Org
+### 6.Authenticate the Org
 
 1.    Playwright MCP launches a browser window
 2.    Log in using the org username and password
@@ -69,16 +69,10 @@ Claude will begin installing everything from the code repo. Claude will orchestr
 ****It takes close to three + hours to complete so let claude do it’s work.** ** Once installation is complete, navigate to Sales Cloud and search for Mark Smith, this is the featured unified profile. From Mark Smith’s profile, go to details and from there you can login to experience cloud to try the logged in user agent experience. All possible conversations are in the video as well as in the “behind the scenes” section in the Git repo.
 
 
-
-
-
-
-</summary>
-
 </details>
 
-## Manual Installation
-
+<details> <h2><strong>Manual Installation</h2></summary>
+  
 There are 3 required steps, these steps allow you to set up Data 360, import data (both structured and unstructured), and setup the employee agent within your Salesforce instance. After completing the first three steps, the employee agent will be automatically set up within your org,  if you want to install the service agent on your own website use Step 4, and if you want to install the agent on an Experience Cloud site follow step 5. If you are satisfied with the employee agent - that has the same functionality as the service agent, then Steps 4 & 5 are optional. 
 
 Once installation is complete, you can navigate to Sales Cloud or the DIY Store front app and search for "Mark Smith" to view all the data unified to enrich Mark Smith's profile. The list of possible agent interactions are under the behind the scenes section below.
