@@ -3,13 +3,17 @@
 
 Welcome to the DIY Storefront, a sample retail application. DIY Storefront is a fictional retail store that uses Data 360, Agentforce, and the Salesforce Platform to deliver highly personalized customer experiences.
 
-The DIY Storefront app showcases Data 360, Agents, and Prompts by using both structured and unstructured data, including Intelligent Context, to process complex information. Watch the video <a href="https://salesforce.vidyard.com/watch/V7MV1HTzYbzMeVPgCx3iZb" target="_blank">here</a> on what is available in this end to end solution.
+The DIY Storefront app showcases Data 360, Agents, and Prompts by using both structured and unstructured data, including Intelligent Context, to process complex information. It includes a comprehensive enriched user powered by Data 360, Agentforce agents using structured and unstructured data to drive contextual conversations, a product carousel in the agent and more..
 
 ## 🎥 Product Demo
 
-[![Watch the video](images/demo-thumbnail.png)](https://share.vidyard.com/watch/XXXXXXXXXXXX)
+[![Watch the video ](images/demo-thumbnail.png)](https://salesforce.vidyard.com/watch/V7MV1HTzYbzMeVPgCx3iZb) on what is included in this end to end solution before you get started.
 
-There are two ways in which you can install this solution, you can use Claude to run the installation process for you, or you can manually setup the solution in your org. The instructions for both are provided below. 
+There are two ways in which you can install this solution kit, you can use Claude to run the installation process for you, or you can manually setup the solution in your org. The instructions for both are provided below. 
+
+## Automated Installation with Claude
+
+## Manual Installation
 
 There are 3 required steps, these steps allow you to set up Data 360, import data (both structured and unstructured), and setup the employee agent within your Salesforce instance. After completing the first three steps, the employee agent will be automatically set up within your org,  if you want to install the service agent on your own website use Step 4, and if you want to install the agent on an Experience Cloud site follow step 5. If you are satisfied with the employee agent - that has the same functionality as the service agent, then Steps 4 & 5 are optional. 
 
