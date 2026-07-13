@@ -28,7 +28,17 @@ There are two ways in which you can install this solution kit, you can use Claud
   | 2 |  Set the login user’s email to yours; make sure to confirm the email change|
   | 3 |  Update your password in the demo org environment|
   | 4 |  Make note of your Username and Password as you’ll need it later|
-  
+
+  ### 3. Clone the Deployment Repository in VS Code
+ | Step | Details |
+  | ----- | ----- |
+  | 1 |  Open VS Code  |
+  | 2 |  Select 'Clone Git Repository|
+  | 3 |  Enter this Git Code Repo URL in the pallet (https://github.com/salesforce-misc/Data360AgentforceSolutionKitRetail)  |
+  | 4 |  Select your local folder (see the pre-deployment instructions section) to download the repository to|
+  | 5 |  Once downloaded, select “Yes, I trust the authors” if prompted|
+  | 6 |  When prompted, select “yes” to open the cloned project folder in VS Code|
+
 </summary>
 
 </details>
