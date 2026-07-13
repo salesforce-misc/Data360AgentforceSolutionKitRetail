@@ -11,7 +11,8 @@ The DIY Storefront app showcases Data 360, Agents, and Prompts by using both str
 
 There are two ways in which you can install this solution kit, you can use Claude to run the installation process for you, or you can manually setup the solution in your org. The instructions for both are provided below. 
 
-<details><h2><strong>Automated Installation with Claude</h2></summary>
+<details>
+<summary><h2><strong>Automated Installation with Claude</strong></h2></summary>
 
   ### 1. Pre-Deployment Instructions
   To ensure a successful install, please ensure your environment is properly configured
@@ -71,7 +72,8 @@ Claude will begin installing everything from the code repo. Claude will orchestr
 
 </details>
 
-<details> <h2><strong>Manual Installation</h2></summary>
+<details>
+<summary><h2><strong>Manual Installation</strong></h2></summary>
   
 There are 3 required steps, these steps allow you to set up Data 360, import data (both structured and unstructured), and setup the employee agent within your Salesforce instance. After completing the first three steps, the employee agent will be automatically set up within your org,  if you want to install the service agent on your own website use Step 4, and if you want to install the agent on an Experience Cloud site follow step 5. If you are satisfied with the employee agent - that has the same functionality as the service agent, then Steps 4 & 5 are optional. 
 
