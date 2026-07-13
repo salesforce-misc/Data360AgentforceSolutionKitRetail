@@ -19,9 +19,16 @@ There are two ways in which you can install this solution kit, you can use Claud
  | Step | Details |
   | ----- | ----- |
   | 1 |  Ensure you have Claude, Git, and Visual Studio Code installed before running the installer. Also ensure that you have permissions to debug the Chrome browser. |
-  | 2 |  Create a folder on your local desktop to store the project. This will ensure that any CLAUDE.md file you may have already created won’t interfere with the install
+  | 2 |  Create a folder on your local desktop to store the project. This will ensure that any CLAUDE.md file you may have already created won’t interfere with the install|
 
-
+  ### 2. Create your target org
+ | Step | Details |
+  | ----- | ----- |
+  | 1 |  Request a demo org from the partner learning camp. If you want to use your own developer org ensure that it has Sales, Service, Experience, Commerce, Field Service, Data Cloud and Loyalty Management licenses/features enabled  |
+  | 2 |  Set the login user’s email to yours; make sure to confirm the email change|
+  | 3 |  Update your password in the demo org environment|
+  | 4 |  Make note of your Username and Password as you’ll need it later|
+  
 </summary>
 
 </details>
