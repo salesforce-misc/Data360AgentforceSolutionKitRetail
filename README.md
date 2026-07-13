@@ -12,6 +12,19 @@ The DIY Storefront app showcases Data 360, Agents, and Prompts by using both str
 There are two ways in which you can install this solution kit, you can use Claude to run the installation process for you, or you can manually setup the solution in your org. The instructions for both are provided below. 
 
 ## Automated Installation with Claude
+<details><summary>
+
+  ### 1. Pre-Deployment Instructions
+  To ensure a successful install, please ensure your environment is properly configured
+ | Step | Details |
+  | ----- | ----- |
+  | 1 |  Ensure you have Claude, Git, and Visual Studio Code installed before running the installer. Also ensure that you have permissions to debug the Chrome browser. |
+  | 2 |  Create a folder on your local desktop to store the project. This will ensure that any CLAUDE.md file you may have already created won’t interfere with the install
+
+
+</summary>
+
+</details>
 
 ## Manual Installation
 
