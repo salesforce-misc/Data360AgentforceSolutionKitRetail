@@ -46,6 +46,28 @@ There are two ways in which you can install this solution kit, you can use Claud
   | 2 |  Claude requires some information to get started. The instructions (prompt), an alias (can be anything), your new Demo Org username and password. |
   | 3 |  Start with the prompt <br><br>"Install Data 360 Retail Installer into Alias: ALIASNAME Username: USERNAME Password: PASSWORD" </br></br> <br>Replace the alias(can be anything), username and password with your own credentials (from when you created your org) and then hit enter to being the installation. Here is an example prompt:Install Data 360 Retail Installer into Alias: Data360RetailSolution Username: XXX.com Password: XXXXX</br> |
 
+### 4. Select Installation Mode
+
+You’ll then receive the following prompt:
+
+**The installer needs confirmation on which mode to run. Based on your request for the complete Data360 Retail Installer, you'll want Mode 2 which includes all 21 steps - the full Data Cloud + Commerce + Experience Cloud solution. Should I proceed with Mode 2 (the complete installation with all 21 steps)?**
+
+
+Choose your adventure! We recommend option 2 
+
+* Mode 1 = Data Cloud Only
+* Mode 2 = Data Cloud + Commerce + Experience Cloud + Agentforce
+
+### 5.Authenticate the Org
+
+1.    Playwright MCP launches a browser window
+2.    Log in using the org username and password
+3.    Click 'Allow Access'
+
+Claude will begin installing everything from the code repo. Claude will orchestrate a series of sub-agents to do the work for you. We do suggest checking in on the installtion once in awhile, as there are times where Claude may require additional permissions from you, depending on your settings.   
+
+**It takes close to three + hours to complete so let claude do it’s work. ** Once installation is complete, navigate to Sales Cloud and search for Mark Smith, this is the featured unified profile. From Mark Smith’s profile, go to details and from there you can login to experience cloud to try the logged in user agent experience. All possible conversations are in the video as well as in the “behind the scenes” section in the Git repo.
+
 
 
 
