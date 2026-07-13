@@ -39,6 +39,18 @@ There are two ways in which you can install this solution kit, you can use Claud
   | 5 |  Once downloaded, select “Yes, I trust the authors” if prompted|
   | 6 |  When prompted, select “yes” to open the cloned project folder in VS Code|
 
+ ### 3. Launch Claude
+ | Step | Details |
+  | ----- | ----- |
+  | 1 |  Open Claude chat session within VS code as shown below  |
+  | 2 |  Claude requires some information to get started. The instructions (prompt), an alias (can be anything), your new Demo Org username and password. |
+  | 3 |  Start with the prompt <br><br>"Install Data 360 Retail Installer into Alias: ALIASNAME Username: USERNAME Password: PASSWORD" </br></br> <br>Replace the alias(can be anything), username and password with your own credentials (from when you created your org) and then hit enter to being the installation. Here is an example prompt:Install Data 360 Retail Installer into Alias: Data360RetailSolution Username: XXX.com Password: XXXXX</br> |
+
+
+
+
+
+
 </summary>
 
 </details>
