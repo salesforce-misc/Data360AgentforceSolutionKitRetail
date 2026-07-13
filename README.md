@@ -6,8 +6,7 @@ Welcome to the DIY Storefront, a sample retail application. DIY Storefront is a 
 The DIY Storefront app showcases Data 360, Agents, and Prompts by using both structured and unstructured data, including Intelligent Context, to process complex information. It includes a comprehensive enriched user powered by Data 360, Agentforce agents using structured and unstructured data to drive contextual conversations, a product carousel in the agent and more..
 
 ## 🎥 Product Demo
-
-[![Watch the video ](images/demo-thumbnail.png)](https://salesforce.vidyard.com/watch/V7MV1HTzYbzMeVPgCx3iZb) on what is included in this end to end solution before you get started.
+[![Watch the video ](https://cdn.vidyard.com/thumbnails/JtZyHrFUWWu1QiPvBTT0Hg/a6ee3165f32e9da91536f7.gif)](https://salesforce.vidyard.com/watch/V7MV1HTzYbzMeVPgCx3iZb) on what is included in this end to end solution before you get started.
 
 There are two ways in which you can install this solution kit, you can use Claude to run the installation process for you, or you can manually setup the solution in your org. The instructions for both are provided below. 
 
