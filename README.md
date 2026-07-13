@@ -366,11 +366,11 @@ This section guides you through the steps required to deploy the Agentforce Serv
 
   That’s it! You’re all set. The Agentforce widget should now be visible on your external website.
 </details>
+</details>
 
-<details><summary>
+<details>
+<summary><h2><strong>Behind the Scenes - how is the agent powered?</strong></h2></summary>
 
- ## Behind the Scenes - how is the agent powered?
-</summary>
 Curious to see the all possible utterances  and how they are powered by the Agent. Here is a list of all the possible conversations, the corresponding topics, and the components that power them. </br></br>
 $${\color {blue} A \space guest \space user \space asks \space general \space sales \space and \space seasonal \space preparation \space questions \space through \space the \space Service \space Agent(DIY Assistant) \space deployed \space on \space the \space external \space website.}$$
 
