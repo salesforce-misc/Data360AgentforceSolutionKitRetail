@@ -24,7 +24,7 @@ There are two ways in which you can install this solution kit, you can use Claud
   ### 2. Create your target org
  | Step | Details |
   | ----- | ----- |
-  | 1 |  Request a demo org from the partner learning camp. If you want to use your own developer org ensure that it has Sales, Service, Experience, Commerce, Field Service, Data Cloud and Loyalty Management licenses/features enabled  |
+  | 1 |  Request a demo org from the partner learning camp here https://partnerlearningcamp.salesforce.com/s/demo-org. If you want to use your own developer org ensure that it has Sales, Service, Experience, Commerce, Field Service, Data Cloud and Loyalty Management licenses/features enabled  |
   | 2 |  Set the login user’s email to yours; make sure to confirm the email change|
   | 3 |  Update your password in the demo org environment|
   | 4 |  Make note of your Username and Password as you’ll need it later|
@@ -44,7 +44,7 @@ There are two ways in which you can install this solution kit, you can use Claud
   | ----- | ----- |
   | 1 |  Open Claude chat session within VS code as shown below  |
   | 2 |  Claude requires some information to get started. The instructions (prompt), an alias (can be anything), your new Demo Org username and password. |
-  | 3 |  Start with the prompt <br><br>"Install Data 360 Retail Installer into Alias: ALIASNAME Username: USERNAME Password: PASSWORD" </br></br> <br>Replace the alias(can be anything), username and password with your own credentials (from when you created your org) and then hit enter to being the installation. Here is an example prompt:Install Data 360 Retail Installer into Alias: Data360RetailSolution Username: XXX.com Password: XXXXX</br> |
+  | 3 |  Start with the prompt <br><br>"**Install Data 360 Retail Installer into Alias: ALIASNAME Username: USERNAME Password: PASSWORD**" </br></br> <br>Replace the alias(can be anything), username and password with your own credentials (from when you created your org) and then hit enter to being the installation. Here is an example prompt:Install Data 360 Retail Installer into Alias: Data360RetailSolution Username: XXX.com Password: XXXXX</br> |
 
 ### 4. Select Installation Mode
 
@@ -66,7 +66,7 @@ Choose your adventure! We recommend option 2
 
 Claude will begin installing everything from the code repo. Claude will orchestrate a series of sub-agents to do the work for you. We do suggest checking in on the installtion once in awhile, as there are times where Claude may require additional permissions from you, depending on your settings.   
 
-**It takes close to three + hours to complete so let claude do it’s work. ** Once installation is complete, navigate to Sales Cloud and search for Mark Smith, this is the featured unified profile. From Mark Smith’s profile, go to details and from there you can login to experience cloud to try the logged in user agent experience. All possible conversations are in the video as well as in the “behind the scenes” section in the Git repo.
+****It takes close to three + hours to complete so let claude do it’s work.** ** Once installation is complete, navigate to Sales Cloud and search for Mark Smith, this is the featured unified profile. From Mark Smith’s profile, go to details and from there you can login to experience cloud to try the logged in user agent experience. All possible conversations are in the video as well as in the “behind the scenes” section in the Git repo.
 
 
 
