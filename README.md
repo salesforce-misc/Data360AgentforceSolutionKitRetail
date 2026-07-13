@@ -367,6 +367,7 @@ This section guides you through the steps required to deploy the Agentforce Serv
   That’s it! You’re all set. The Agentforce widget should now be visible on your external website.
 </details>
 </details>
+</details>
 
 <details>
 <summary><h2><strong>Behind the Scenes - how is the agent powered?</strong></h2></summary>
