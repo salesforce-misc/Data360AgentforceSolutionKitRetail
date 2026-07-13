@@ -22,6 +22,7 @@ There are two ways in which you can install this solution kit, you can use Claud
   | 2 |  Create a folder on your local desktop to store the project. This will ensure that any CLAUDE.md file you may have already created won’t interfere with the install|
 
 
+
   ### 2. Create your target org
  | Step | Details |
   | ----- | ----- |
